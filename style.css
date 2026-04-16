@@ -17,6 +17,8 @@
 
 html {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -24,6 +26,8 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
   line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* Navbar */
@@ -37,6 +41,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .logo-container {
@@ -45,6 +52,7 @@ body {
   align-items: center;
   gap: 40px; /* Incrementado para dar amplia respiración y jerarquía */
   margin-left: -2rem; /* Desplaza el logotipo más hacia el borde de la pantalla */
+  min-width: 0; /* Permite que el contenedor flex se encoja */
 }
 
 .nav-logo {
@@ -58,6 +66,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center; /* Perfectamente centrado verticalmente */
+  min-width: 0; /* Permite que el texto se encoja dentro del flex */
 }
 
 .logo-title {
@@ -157,6 +166,8 @@ body {
   align-items: stretch; /* Empata la altura de la imagen garantizada con el texto */
   justify-content: center;
   background-color: var(--color-white); /* Fondo blanco puro para contraste de fotografía */
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .md-image-col {
@@ -618,12 +629,15 @@ body {
   .navbar {
     flex-direction: column;
     padding: 1rem;
+    width: 100%;
   }
   
   .logo-container {
     flex-direction: column;
     text-align: center;
     gap: 0.5rem;
+    margin-left: 0;
+    width: 100%;
   }
 
   .logo-title {
@@ -631,7 +645,6 @@ body {
     font-size: 0.95rem;
   }
 
-  
   .navbar nav ul {
     margin-top: 1rem;
     gap: 1rem;
@@ -662,5 +675,61 @@ body {
   
   .contacto-mapa {
     min-height: 350px;
+  }
+
+  .mensaje-directora {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 3rem 5%;
+  }
+
+  .md-image-col {
+    max-height: 350px;
+  }
+}
+
+/* iPhone y pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .logo-container {
+    margin-left: 0;
+    gap: 0.4rem;
+  }
+
+  .nav-logo {
+    height: 100px;
+  }
+
+  .logo-title {
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+
+  .logo-subtitle {
+    font-size: 0.82rem;
+  }
+
+  .navbar nav ul {
+    gap: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trayectoria-grid {
+    grid-template-columns: 1fr;
   }
 }
