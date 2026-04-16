@@ -1,0 +1,666 @@
+:root {
+  --color-blue: #0059A1;
+  --color-green: #0C9D4C;
+  --color-yellow: #FFC72C;
+  --color-dark: #1F2937;
+  --color-light: #F9FAFB;
+  --color-white: #FFFFFF;
+  
+  --font-main: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--color-white);
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px; /* Incrementado para dar amplia respiración y jerarquía */
+  margin-left: -2rem; /* Desplaza el logotipo más hacia el borde de la pantalla */
+}
+
+.nav-logo {
+  height: 180px; /* Tamaño duplicado para dominar el encabezado */
+  width: auto; /* Mantiene proporciones orginales */
+  object-fit: contain;
+  image-rendering: crisp-edges;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Perfectamente centrado verticalmente */
+}
+
+.logo-title {
+  font-family: 'Montserrat', var(--font-main);
+  font-size: 1.25rem; /* Reducido ligeramente a favor del subtítulo */
+  font-weight: 500; /* Peso medium para que no aplane */
+  color: var(--color-blue);
+  line-height: 1.2;
+}
+
+.logo-subtitle {
+  font-family: 'Montserrat', var(--font-main);
+  font-size: 1.15rem; /* Ligeramente menor a la línea principal (1.25rem) */
+  font-weight: 600; /* Integración uniforme y equilibrada */
+  font-style: italic; /* Cursiva solicitada */
+  color: var(--color-blue); /* Azul institucional igual al título */
+  margin-top: 0.1rem;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+  color: var(--color-green);
+}
+
+/* Utilities */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-yellow);
+  color: var(--color-dark);
+}
+
+.btn-primary:hover {
+  background-color: #eab308;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(234, 179, 8, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 89, 161, 0.75), rgba(12, 157, 76, 0.75)), url('images/hero_image.png') center/cover no-repeat;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  padding: 0 20px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Mensaje Directora Section */
+.mensaje-directora {
+  padding: 6rem 5%;
+  display: grid;
+  grid-template-columns: 400px 1fr; /* Estricto a la izquierda para imagen fotorealista */
+  gap: 5rem;
+  align-items: stretch; /* Empata la altura de la imagen garantizada con el texto */
+  justify-content: center;
+  background-color: var(--color-white); /* Fondo blanco puro para contraste de fotografía */
+}
+
+.md-image-col {
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra suave para resaltar */
+  border: 1px solid #e5e7eb; /* Borde muy fino gris claro */
+  display: flex;
+  overflow: hidden;
+  margin: 0;
+}
+
+.md-image-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.md-text-col h2 {
+  font-family: 'Montserrat', var(--font-main);
+  font-size: 2.6rem;
+  color: var(--color-blue);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.md-text-col p {
+  font-size: 1.15rem;
+  margin-bottom: 1.5rem;
+  color: #4b5563;
+  line-height: 1.8;
+}
+
+.md-text-col .directora-firma {
+  margin-top: 3rem;
+  font-size: 1.2rem;
+  color: var(--color-blue);
+  font-family: 'Montserrat', var(--font-main);
+  border-top: 2px solid #e5e7eb;
+  padding-top: 2rem;
+  font-style: italic;
+  margin-bottom: 0;
+}
+
+.md-text-col .directora-firma strong {
+  font-weight: 700;
+  font-size: 1.35rem;
+  font-style: normal; /* El nombre normal, el cargo en cursiva */
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Director Section */
+.director {
+  padding: 5rem 5%;
+  background-color: #F0F9FF; /* light blue */
+}
+
+.director-container {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.director-info {
+  flex: 1;
+}
+
+.director-info h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+  margin-bottom: 0.5rem;
+}
+
+.director-info h3 {
+  font-size: 1.5rem;
+  color: var(--color-green);
+  margin-bottom: 1.5rem;
+}
+
+.director-info p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #4b5563;
+}
+
+.director-image {
+  flex: 1;
+}
+
+.director-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+  border: 5px solid var(--color-white);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Galeria Histórica */
+.galeria {
+  padding: 5rem 5%;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.galeria h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+  margin-bottom: 1rem;
+}
+
+.galeria-desc {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 3rem;
+}
+
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.galeria-item {
+  background: var(--color-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover {
+  transform: translateY(-5px);
+}
+
+.galeria-item .img-placeholder {
+  width: 100%;
+  height: 250px;
+  background-color: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  color: #6b7280;
+  font-size: 0.9rem;
+  border-bottom: 4px solid var(--color-green);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+}
+
+.galeria-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--color-green);
+  display: block;
+}
+
+.galeria-item h3 {
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--color-blue);
+}
+
+/* Trayectoria Histórica */
+.trayectoria {
+  padding: 5rem 5%;
+  background-color: #F8FAFC; /* Fondo muy suave y contrastante */
+  text-align: center;
+}
+
+.trayectoria h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+  margin-bottom: 1rem;
+}
+
+.trayectoria-desc {
+  color: #4b5563;
+  font-size: 1.15rem;
+  margin-bottom: 3.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.trayectoria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trayectoria-card {
+  background: var(--color-white);
+  border-radius: 16px; /* Borde redondeado elegante */
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* Sombra muy sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #f1f5f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.trayectoria-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08); /* Mejora de sombra elegante al hacer hover */
+}
+
+.trayectoria-card .img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 4px solid var(--color-green); /* Acento sutil en el borde de foto */
+}
+
+.trayectoria-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 10;
+}
+
+.fallback-placeholder {
+  position: absolute;
+  color: #94a3b8;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+
+.trayectoria-card .caption {
+  padding: 1.8rem;
+  text-align: left;
+  flex-grow: 1;
+  background: #ffffff;
+}
+
+.trayectoria-card h3 {
+  color: var(--color-blue); /* Fuente azul institucional */
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.trayectoria-card p {
+  color: #475569;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.elegant-placeholder {
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+  border: 2px dashed #9ca3af !important;
+  color: #4b5563 !important;
+}
+
+/* Services */
+.services {
+  padding: 5rem 5%;
+  background-color: var(--color-light);
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+  margin-bottom: 3rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  max-width: 900px; /* Ancho ajustado para forzar alineamiento 2x2 elegante al centro */
+  margin: 0 auto;
+}
+
+.service-card {
+  background: var(--color-white);
+  padding: 2.5rem 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+  border-top: 5px solid var(--color-green); /* Borde sutil de color verde del logo */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%; /* Obliga a mantener simetría idéntica entre tarjetas contiguas */
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+  font-size: 1.45rem;
+  color: var(--color-blue); /* Color azul institucional */
+  margin-bottom: 1rem;
+  font-family: 'Montserrat', var(--font-main);
+}
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card p {
+  color: #4b5563;
+  flex-grow: 1; /* Permite estirarse equilibrando los párrafos */
+  margin-bottom: 2rem; /* Deja suficiente paso superior al botón contiguo inferior */
+}
+
+/* WhatsApp Call to Action */
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  padding: 0.8rem 1.6rem;
+  background-color: #25d366; /* Official WhatsApp Green */
+  color: #ffffff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebc56;
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+/* Contacto y Mapa Section */
+.contacto {
+  padding: 6rem 5%;
+  background-color: #f8fafc; /* Gris/azul muy clarito para que resalte el blanco */
+}
+
+.contacto-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Columna más amplia a la derecha para el mapa */
+  background-color: var(--color-white);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+
+.contacto-info {
+  padding: 4rem 3rem;
+}
+
+.contacto-info h2 {
+  font-size: 2.2rem;
+  color: var(--color-blue);
+  margin-bottom: 2.5rem;
+  font-family: 'Montserrat', var(--font-main);
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.icon-contact {
+  font-size: 1.5rem;
+  background: #f0f9ff; /* Azul muy tenue institucional */
+  color: var(--color-blue); /* Emoji fallback color trick/tint */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.info-text h4 {
+  font-size: 1.15rem;
+  color: var(--color-blue);
+  margin-bottom: 0.3rem;
+}
+
+.info-text p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.enlace-contacto {
+  color: var(--color-green);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.enlace-contacto:hover {
+  text-decoration: underline;
+}
+
+.contacto-mapa {
+  width: 100%;
+  height: 100%;
+  min-height: 400px; /* Asegura altura mínima para tablet/desktop de 400px */
+}
+
+.contacto-mapa iframe {
+  display: block;
+}
+
+/* Footer Minimalista */
+.footer {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 1.5rem 5%;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .logo-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+
+  .logo-title {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
+
+  
+  .navbar nav ul {
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  
+  .about {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .director-container {
+    flex-direction: column;
+  }
+  
+  .contacto-wrapper {
+    grid-template-columns: 1fr;
+  }
+  
+  .contacto-mapa {
+    min-height: 350px;
+  }
+}
