@@ -50,9 +50,10 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 40px; /* Incrementado para dar amplia respiración y jerarquía */
-  margin-left: -2rem; /* Desplaza el logotipo más hacia el borde de la pantalla */
-  min-width: 0; /* Permite que el contenedor flex se encoja */
+  gap: 40px;
+  margin-left: -2rem; /* Solo activo en pantallas grandes — se cancela en tablets */
+  min-width: 0;
+  overflow: hidden; /* Bloquea cualquier desbordamiento interno */
 }
 
 .nav-logo {
@@ -628,15 +629,25 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1rem;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.footer-genaia span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-style: italic;
+  letter-spacing: 0.03em;
 }
 
 .footer-genaia img {
-  max-height: 40px;
+  max-height: 80px;
   width: auto;
-  opacity: 0.85;
-  filter: brightness(0) invert(1); /* Convierte a blanco para que encaje con el fondo azul */
+  opacity: 0.92;
+  filter: brightness(0) invert(1); /* Blanco sobre fondo azul */
   transition: opacity 0.3s ease;
+  vertical-align: middle;
 }
 
 .footer-genaia img:hover {
@@ -647,30 +658,41 @@ body {
 @media (max-width: 1024px) {
   .navbar {
     flex-wrap: wrap;
-    padding: 1rem 3%;
-    gap: 0.5rem;
+    padding: 0.75rem 3%;
+    gap: 0.25rem;
     width: 100%;
     box-sizing: border-box;
+    overflow: hidden;
   }
 
   .logo-container {
     flex: 1 1 auto;
     min-width: 0;
-    margin-left: 0;
-    gap: 16px;
-  }
-
-  .logo-title {
-    font-size: 1rem;
-    line-height: 1.25;
-  }
-
-  .logo-subtitle {
-    font-size: 0.95rem;
+    margin-left: 0; /* Cancela el -2rem del escritorio — causa principal de la franja */
+    gap: 12px;
+    overflow: hidden;
   }
 
   .nav-logo {
-    height: 130px;
+    height: 90px;
+    flex-shrink: 0;
+  }
+
+  .logo-text {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .logo-title {
+    font-size: 0.72rem; /* Drásticamente reducido para iPad */
+    line-height: 1.3;
+    white-space: normal; /* Permite wrap en 2 líneas cortas */
+    word-break: break-word;
+    max-width: 220px;
+  }
+
+  .logo-subtitle {
+    font-size: 0.78rem;
   }
 
   .navbar nav {
@@ -679,13 +701,14 @@ body {
 
   .navbar nav ul {
     flex-wrap: wrap;
-    gap: 0.8rem;
+    gap: 0.6rem;
     justify-content: flex-end;
+    font-size: 0.9rem;
   }
 
   .mensaje-directora {
-    grid-template-columns: 300px 1fr;
-    gap: 3rem;
+    grid-template-columns: 280px 1fr;
+    gap: 2.5rem;
   }
 }
 
