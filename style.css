@@ -129,14 +129,17 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 89, 161, 0.75), rgba(12, 157, 76, 0.75)), url('images/hero_image.png') center/cover no-repeat;
+  background: linear-gradient(135deg, rgba(0, 89, 161, 0.55) 0%, rgba(12, 157, 76, 0.45) 100%),
+              url('images/hero_illustration_flat.png') center/cover no-repeat;
   min-height: 90vh;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--color-white);
   padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .hero-content {
@@ -148,14 +151,22 @@ body {
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.55), 0 0 30px rgba(0,0,0,0.3);
+}
+
+.hero-content h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+  text-shadow: 2px 2px 12px rgba(0,0,0,0.55), 0 0 30px rgba(0,0,0,0.3);
 }
 
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 2.5rem;
-  font-weight: 300;
-  text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+  font-weight: 400;
+  text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
 }
 
 /* Mensaje Directora Section */
@@ -761,7 +772,8 @@ body {
     justify-content: center;
   }
   
-  .hero-content h1 {
+  .hero-content h1,
+  .hero-content h2 {
     font-size: 2.5rem;
   }
   
@@ -826,7 +838,8 @@ body {
     font-size: 0.85rem;
   }
 
-  .hero-content h1 {
+  .hero-content h1,
+  .hero-content h2 {
     font-size: 1.8rem;
   }
 
