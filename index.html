@@ -15,16 +15,52 @@
             overflow-x: hidden;
         }
 
-        .hero {
+        .navbar {
+            margin: 0;
+            padding: 10px 20px;
+        }
+
+        .navbar nav ul {
+            margin: 0;
             padding: 0;
         }
 
-        .hero-image {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0;
-            padding: 0;
+        .navbar nav ul li {
+            margin: 0 10px;
+        }
+
+        .hero-section {
+            position: relative;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: url('imagenes/portada_final.jpg') no-repeat center center;
+            background-size: cover;
+            margin-top: -20px;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: #ffffff;
+            padding: 0 20px;
+            max-width: 900px;
+        }
+
+        .hero-content h2,
+        .hero-content p {
+            margin: 0 0 15px;
         }
 
         .footer {
@@ -44,17 +80,18 @@
         }
 
         .footer img {
-            max-height: 18px;
+            height: 1.2em;
             width: auto;
             display: inline-block;
             vertical-align: middle;
+            margin-left: 5px;
         }
 
         .footer-content {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 5px;
             flex-wrap: nowrap;
             white-space: nowrap;
         }
@@ -77,7 +114,7 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#trayectoria">Trayectoria</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -85,8 +122,7 @@
         </nav>
     </header>
 
-    <section id="hero" class="hero">
-        <img src="imagenes/portada_final.jpg" alt="Portada" class="hero-image">
+    <section id="inicio" class="hero-section">
         <div class="hero-content">
             <h2>Más de 25 años formando el futuro</h2>
             <p>Especialistas en apoyo académico y desarrollo integral para niños de 3 a 12 años</p>
@@ -257,9 +293,9 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2026 Todos los derechos reservados</p>
-            <span>by</span>
-            <img src="Logo/Logotipo_GeneraIA_sinfondo.png" alt="Diseño web por GeneraIA">
+            <p>© 2026 Todos los derechos reservados | by</p>
+            <img src="Logo/Logotipo_GeneraIA_sinfondo.png" alt="Diseño web por GeneraIA"
+                style="height: 1.2em; vertical-align: middle; margin-left: 5px;">
         </div>
     </footer>
 </body>
