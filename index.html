@@ -17,7 +17,7 @@
 
         .navbar {
             margin: 0;
-            padding: 10px 20px;
+            padding: 10px 20px 5px;
         }
 
         .navbar nav ul {
@@ -30,15 +30,17 @@
         }
 
         .hero-section {
-            position: relative;
-            height: 80vh;
+            background-image: url('imagenes/portada_final.jpg');
+            background-size: cover;
+            background-position: center top;
+            height: 90vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: url('imagenes/portada_final.jpg') no-repeat center center;
-            background-size: cover;
-            margin-top: -20px;
+            color: white;
+            margin-top: 0;
+            position: relative;
             overflow: hidden;
         }
 
@@ -61,6 +63,7 @@
         .hero-content h2,
         .hero-content p {
             margin: 0 0 15px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
         }
 
         .footer {
@@ -293,9 +296,7 @@
 
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2026 Todos los derechos reservados | by</p>
-            <img src="Logo/Logotipo_GeneraIA_sinfondo.png" alt="Diseño web por GeneraIA"
-                style="height: 1.2em; vertical-align: middle; margin-left: 5px;">
+            <p>© 2026 Todos los derechos reservados | by <img src="Logo/Logotipo_GeneraIA_sinfondo.png" alt="GeneraIA" style="height: 25px; vertical-align: middle; margin-left: 8px; filter: brightness(1.1);"></p>
         </div>
     </footer>
 </body>
