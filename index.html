@@ -36,7 +36,6 @@
             background-color: #0d47a1;
             color: #ffffff;
             text-align: center;
-            flex-wrap: wrap;
         }
 
         .footer p,
@@ -45,9 +44,10 @@
         }
 
         .footer img {
-            max-height: 35px;
+            max-height: 18px;
             width: auto;
-            display: block;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .footer-content {
@@ -55,7 +55,8 @@
             align-items: center;
             justify-content: center;
             gap: 15px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            white-space: nowrap;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -146,7 +147,7 @@
 
     <section id="mensaje-directora" class="mensaje-directora">
         <div class="md-image-col">
-            <img src="images/directora_ia.png" alt="Lic. Esperanza Margarita Puente Aguilar" loading="lazy">
+            <img src="imagenes/directora_ia.png" alt="Lic. Esperanza Margarita Puente Aguilar" loading="lazy">
         </div>
         <div class="md-text-col">
             <h2>Vocación, Rigor Académico y Amor por la Infancia</h2>
