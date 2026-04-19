@@ -116,6 +116,48 @@
             white-space: nowrap;
         }
 
+        #fototeca {
+            background: #ffffff;
+            padding: 60px 20px;
+            color: #222;
+        }
+
+        #fototeca h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            color: #111;
+        }
+
+        .fototeca-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .fototeca-card {
+            overflow: hidden;
+            border-radius: 16px;
+            background: #f8f8f8;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .fototeca-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .fototeca-card span {
+            display: block;
+            padding: 14px 16px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+
         @media (max-width: 768px) {
             .hero-subtitle {
                 font-size: 1.5rem;
@@ -151,7 +193,7 @@
                 <li><a href="#trayectoria">Trayectoria</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
-                <li><a href="https://drive.google.com/drive/folders/1lQeZ4OArILuzspk8wZGmqU5HNYX6SpO9?usp=sharing" target="_blank" rel="noopener noreferrer">Fototeca</a></li>
+                <li><a href="#fototeca">Fototeca</a></li>
             </ul>
         </nav>
     </header>
@@ -285,6 +327,30 @@
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
+            </div>
+        </div>
+    </section>
+
+    </section>
+
+    <section id="fototeca">
+        <h2>Fototeca de Generaciones</h2>
+        <div class="fototeca-grid">
+            <div class="fototeca-card">
+                <img src="generaciones/foto1.jpg" alt="Generación 1">
+                <span>Generación 1</span>
+            </div>
+            <div class="fototeca-card">
+                <img src="generaciones/foto2.jpg" alt="Generación 2">
+                <span>Generación 2</span>
+            </div>
+            <div class="fototeca-card">
+                <img src="generaciones/foto3.jpg" alt="Generación 3">
+                <span>Generación 3</span>
+            </div>
+            <div class="fototeca-card">
+                <img src="generaciones/foto4.jpg" alt="Generación 4">
+                <span>Generación 4</span>
             </div>
         </div>
     </section>
