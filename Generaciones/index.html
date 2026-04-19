@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Generacional | Fototeca</title>
+    <style>
+        :root {
+            color-scheme: light;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: #f6f6f6;
+            color: #111;
+            line-height: 1.5;
+        }
+        .page-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px 50px;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #111;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            padding: 12px 18px;
+            border-radius: 999px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-weight: 600;
+        }
+        h1 {
+            margin: 30px 0 20px;
+            font-size: 2.6rem;
+            color: #111;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .gallery-card {
+            background: #ffffff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        }
+        .gallery-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-card span {
+            display: block;
+            padding: 16px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .gallery-card img {
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <a href="../index.html" class="back-link">← Volver al Inicio</a>
+        <h1>Acervo Generacional (2003 - 2020)</h1>
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <img src="foto1.jpg" alt="Foto de generación 1">
+                <span>Generación 1</span>
+            </div>
+            <div class="gallery-card">
+                <img src="foto2.jpg" alt="Foto de generación 2">
+                <span>Generación 2</span>
+            </div>
+            <div class="gallery-card">
+                <img src="foto3.jpg" alt="Foto de generación 3">
+                <span>Generación 3</span>
+            </div>
+            <div class="gallery-card">
+                <img src="foto4.jpg" alt="Foto de generación 4">
+                <span>Generación 4</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
