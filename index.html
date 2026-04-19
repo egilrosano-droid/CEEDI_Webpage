@@ -98,6 +98,12 @@
             flex-wrap: nowrap;
             white-space: nowrap;
         }
+
+        @media (max-width: 768px) {
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+        }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -128,7 +134,7 @@
     <section id="inicio" class="hero-section" style="background-image: url('imagenes/portada_final.jpg?v=1.1'); background-size: cover; background-position: center 0%; height: 90vh; display: flex; align-items: center; justify-content: center;">
         <div class="hero-content">
             <h1>Club de Tareas y Regularización</h1>
-            <h2>Más de 25 años formando el futuro</h2>
+            <h2 class="hero-subtitle" style="white-space: nowrap; width: 100%; display: block;">Más de 25 años formando el futuro</h2>
             <p>Especialistas en apoyo académico y desarrollo integral para niños de 3 a 12 años</p>
             <a href="#contacto" class="btn btn-primary">Contáctanos Hoy</a>
         </div>
