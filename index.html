@@ -78,6 +78,7 @@
                     <li><a href="#trayectoria">Trayectoria</a></li>
                     <li><a href="#mensaje-directora">Vocación</a></li>
                     <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                     <li><a href="generaciones/index.html">Fototeca</a></li>
                 </ul>
@@ -189,6 +190,91 @@
                     profesional.</p>
                 <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Atenci%C3%B3n%20Especializada%20(TDAH%2C%20dislexia)%20en%20CEEDI."
                     target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonios" aria-labelledby="testimonios-title">
+        <div class="testimonios-inner">
+            <h2 id="testimonios-title">Voces de familias y generaciones</h2>
+            <p class="testimonios-intro">Padres, madres y exalumnos comparten su experiencia con el CEEDI. Los
+                testimonios se publican tras una breve revisión.</p>
+
+            <div class="testimonios-filters" role="group" aria-label="Filtrar testimonios">
+                <button type="button" class="testimonios-filter is-active" data-filter="todos">Todos</button>
+                <button type="button" class="testimonios-filter" data-filter="familia">Padres y tutores</button>
+                <button type="button" class="testimonios-filter" data-filter="exalumno">Exalumnos</button>
+            </div>
+
+            <div id="testimonios-grid" class="testimonios-grid" aria-live="polite"></div>
+            <p id="testimonios-empty" class="testimonios-empty" hidden>Aún no hay testimonios en esta categoría. ¡Sé de
+                los primeros en compartir el tuyo!</p>
+            <div class="testimonios-more-wrap">
+                <button type="button" id="testimonios-more" class="btn btn-primary" hidden>Ver más testimonios</button>
+            </div>
+
+            <div class="testimonios-form-card">
+                <h3>Comparte tu testimonio</h3>
+                <p class="testimonios-form-note">Si eres mamá, papá, tutor o exalumno (¡también si ahora traes a tu hijo
+                    o hija!), cuéntanos tu experiencia. Revisamos cada mensaje antes de publicarlo.</p>
+
+                <form id="form-testimonio" class="testimonios-form"
+                    action="https://formsubmit.co/informes@ceedilms.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo testimonio para la web CEEDI">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://ceedilms.com/?enviado=1#testimonios">
+                    <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="form-row">
+                        <label for="testimonio-nombre">Nombre o cómo quieres aparecer</label>
+                        <input id="testimonio-nombre" name="nombre" type="text" required maxlength="80"
+                            placeholder="Ej. Familia García / Ana M.">
+                    </div>
+
+                    <div class="form-row form-row--split">
+                        <div>
+                            <label for="testimonio-rol">Soy</label>
+                            <select id="testimonio-rol" name="rol" required>
+                                <option value="">Selecciona…</option>
+                                <option value="padre">Padre / Madre / Tutor</option>
+                                <option value="exalumno">Exalumno / Exalumna</option>
+                                <option value="ambos">Exalumno/a y ahora padre/madre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="testimonio-anio">Año (opcional)</label>
+                            <input id="testimonio-anio" name="anio" type="text" maxlength="20"
+                                placeholder="Ej. 2026">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="testimonio-relacion">Relación con el CEEDI (opcional)</label>
+                        <input id="testimonio-relacion" name="relacion" type="text" maxlength="120"
+                            placeholder="Ej. Mamá de alumno de Club de Tareas / Exalumna generación 2012">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="testimonio-texto">Tu testimonio</label>
+                        <textarea id="testimonio-texto" name="testimonio" required maxlength="800" rows="5"
+                            placeholder="Cuéntanos qué ha significado el CEEDI para ti o tu familia…"></textarea>
+                        <span class="form-hint"><span id="testimonio-count">0</span>/800</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="testimonio-contacto">Correo o WhatsApp (solo para contacto interno, no se publica)</label>
+                        <input id="testimonio-contacto" name="contacto" type="text" maxlength="120"
+                            placeholder="Opcional">
+                    </div>
+
+                    <div class="testimonios-form-actions">
+                        <button type="submit" class="btn btn-primary">Enviar testimonio</button>
+                        <a id="testimonio-wa" class="btn-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Enviar
+                            por WhatsApp</a>
+                    </div>
+                    <p id="testimonio-status" class="testimonios-status" role="status" aria-live="polite"></p>
+                </form>
             </div>
         </div>
     </section>
@@ -313,6 +399,7 @@
             });
         })();
     </script>
+    <script src="js/testimonios.js" defer></script>
 
 </body>
 

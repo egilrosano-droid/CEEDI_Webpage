@@ -1,0 +1,18 @@
+[
+  {
+    "id": "t001",
+    "nombre": "Familia R.",
+    "rol": "padre",
+    "relacion": "Papá de alumno de Club de Tareas",
+    "texto": "Desde que mi hijo asiste al club, entrega tareas con más orden y llega más seguro a la escuela. El trato es cercano y profesional.",
+    "anio": "2025"
+  },
+  {
+    "id": "t002",
+    "nombre": "Exalumna CEEDI",
+    "rol": "exalumno",
+    "relacion": "Exalumna y mamá de alumna actual",
+    "texto": "Estudié aquí de niña y hoy traigo a mi hija al club de tareas. Confío en la misma dedicación y cariño que me acompañaron a mí.",
+    "anio": "2026"
+  }
+]
