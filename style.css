@@ -30,9 +30,13 @@ body {
   overflow-x: hidden !important;
 }
 
-/* Anclas: ya no hay barra fija encima de las secciones */
+/* Anclas: espacio para la barra compacta fija */
 section[id] {
-  scroll-margin-top: 1rem;
+  scroll-margin-top: 5.5rem;
+}
+
+#inicio.hero-section {
+  scroll-margin-top: 0;
 }
 
 /* Navbar solo en portada: dentro del hero, absolute (sale al hacer scroll) */
@@ -109,6 +113,104 @@ section[id] {
 
 .navbar nav a:hover {
   color: var(--color-green);
+}
+
+/* Barra compacta: visible al salir del hero */
+.nav-compact {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 4%;
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e2e8f0;
+  transform: translateY(-110%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-compact.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-compact__brand {
+  flex-shrink: 0;
+  font-family: 'Montserrat', var(--font-main);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-blue);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.nav-compact__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.35rem 0.85rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-compact__list a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.nav-compact__list a:hover,
+.nav-compact__list a.is-active {
+  color: var(--color-green);
+}
+
+.nav-compact__list a.is-active {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+@media (max-width: 768px) {
+  .nav-compact {
+    padding: 0.5rem 3%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+  }
+
+  .nav-compact__list {
+    justify-content: center;
+    row-gap: 0.25rem;
+    column-gap: 0.65rem;
+  }
+
+  .nav-compact__list a {
+    font-size: 0.78rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 7rem;
+  }
+
+  #trayectoria.trayectoria,
+  #servicios.services,
+  .planes,
+  .testimonios,
+  .contacto,
+  .mensaje-directora {
+    scroll-margin-top: 7rem;
+  }
 }
 
 /* Utilities */
@@ -392,15 +494,17 @@ button.btn {
 
 /* Mensaje Directora Section */
 .mensaje-directora {
-  padding: 6rem 5%;
+  padding: 5.5rem 5% 6rem;
   display: grid;
-  grid-template-columns: 400px 1fr; /* Estricto a la izquierda para imagen fotorealista */
-  gap: 5rem;
-  align-items: stretch; /* Empata la altura de la imagen garantizada con el texto */
+  grid-template-columns: minmax(260px, 380px) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 5rem);
+  align-items: stretch;
   justify-content: center;
-  background-color: var(--color-white); /* Fondo blanco puro para contraste de fotografía */
-  max-width: 100%;
+  background-color: var(--color-white);
+  max-width: 1200px;
+  margin: 0 auto;
   box-sizing: border-box;
+  scroll-margin-top: 5.5rem;
 }
 
 .md-image-col {
@@ -587,18 +691,67 @@ button.btn {
 }
 
 #trayectoria.trayectoria {
-  /* Menos margen de ancla → la vista sube (~0,9 cm respecto al intento anterior con +) */
-  scroll-margin-top: calc(1rem - 0.9cm);
-  padding-top: 120px;
-  padding-bottom: 120px;
+  scroll-margin-top: 5.5rem;
+  padding-top: 5.5rem;
+  padding-bottom: 5rem;
 }
 
 .trayectoria-prose {
   max-width: 850px;
   margin: 0 auto;
-  text-align: justify;
-  font-size: 1.25rem;
-  line-height: 1.8;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.75;
+}
+
+.trayectoria-timeline {
+  max-width: 820px;
+  margin: 2rem auto 0;
+  padding: 0;
+  list-style: none;
+  border-left: 3px solid #bfdbfe;
+  text-align: left;
+}
+
+.trayectoria-timeline li {
+  position: relative;
+  padding: 0 0 2rem 1.75rem;
+}
+
+.trayectoria-timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.trayectoria-timeline li::before {
+  content: '';
+  position: absolute;
+  left: -0.55rem;
+  top: 0.35rem;
+  width: 0.85rem;
+  height: 0.85rem;
+  border-radius: 50%;
+  background: var(--color-green);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+.trayectoria-year {
+  display: inline-block;
+  font-family: 'Montserrat', var(--font-main);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-blue);
+  background: #e0f2fe;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.55rem;
+}
+
+.trayectoria-timeline p {
+  margin: 0;
+  color: #334155;
+  font-size: 1.08rem;
+  line-height: 1.7;
 }
 
 .trayectoria-desc {
@@ -691,13 +844,13 @@ button.btn {
 
 /* Services */
 .services {
-  padding: 5rem 5%;
+  padding: 5.5rem 5% 5rem;
   background-color: var(--color-light);
   text-align: center;
 }
 
 #servicios.services {
-  scroll-margin-top: calc(1rem - 2.5cm);
+  scroll-margin-top: 5.5rem;
 }
 
 .services h2 {
@@ -708,10 +861,23 @@ button.btn {
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
-  max-width: 900px; /* Ancho ajustado para forzar alineamiento 2x2 elegante al centro */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.75rem;
+  max-width: 1100px;
   margin: 0 auto;
+}
+
+.services-grid .service-card {
+  grid-column: span 2;
+}
+
+/* 5 tarjetas: 3 arriba + 2 centradas abajo */
+.services-grid .service-card:nth-child(4):nth-last-child(2) {
+  grid-column: 2 / span 2;
+}
+
+.services-grid .service-card:nth-child(5):last-child {
+  grid-column: 4 / span 2;
 }
 
 .service-card {
@@ -745,6 +911,18 @@ button.btn {
   font-family: 'Montserrat', var(--font-main);
 }
 
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid .service-card,
+  .services-grid .service-card:nth-child(4):nth-last-child(2),
+  .services-grid .service-card:nth-child(5):last-child {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 600px) {
   .services-grid {
     grid-template-columns: 1fr;
@@ -757,10 +935,171 @@ button.btn {
   margin-bottom: 2rem; /* Deja suficiente paso superior al botón contiguo inferior */
 }
 
+/* Planes y costos */
+.planes {
+  padding: 5.5rem 5% 5rem;
+  background-color: #f8fafc;
+  scroll-margin-top: 5.5rem;
+}
+
+.planes-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.planes h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+  text-align: center;
+  margin-bottom: 0.75rem;
+  font-family: 'Montserrat', var(--font-main);
+}
+
+.planes-intro {
+  text-align: center;
+  color: #4b5563;
+  max-width: 720px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+  font-size: 1.08rem;
+}
+
+.planes-block {
+  margin-bottom: 2.75rem;
+}
+
+.planes-block h3 {
+  color: var(--color-blue);
+  font-size: 1.45rem;
+  font-family: 'Montserrat', var(--font-main);
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.planes-ages {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+
+.planes-block-note {
+  color: #4b5563;
+  margin-bottom: 1.25rem;
+  line-height: 1.65;
+  max-width: 820px;
+}
+
+.planes-block--soft {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.75rem 1.5rem 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.planes-grid--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 700px) {
+  .planes-grid,
+  .planes-grid--two {
+    grid-template-columns: 1fr;
+  }
+}
+
+.plan-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1.5rem 1.35rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 20px rgba(0, 89, 161, 0.06);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 0.75rem;
+}
+
+.planes-block--soft .plan-card {
+  background: #f8fafc;
+}
+
+.plan-card--accent {
+  border-top: 4px solid var(--color-yellow);
+}
+
+.plan-card h4 {
+  margin: 0;
+  color: var(--color-blue);
+  font-size: 1.2rem;
+  font-family: 'Montserrat', var(--font-main);
+}
+
+.plan-includes {
+  margin: 0;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.55;
+  flex-grow: 1;
+}
+
+.plan-price {
+  margin: 0;
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  font-family: 'Montserrat', var(--font-main);
+}
+
+.plan-price span {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #64748b;
+  margin-top: 0.15rem;
+}
+
+.plan-card .btn-whatsapp {
+  align-self: flex-start;
+  margin-top: 0.25rem;
+}
+
+.planes-disclaimer {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.92rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .planes h2 {
+    font-size: 2rem;
+  }
+
+  .planes-block--soft {
+    padding: 1.25rem 1rem;
+  }
+}
+
 /* Testimonios */
 .testimonios {
-  padding: 5rem 5%;
+  padding: 5.5rem 5% 5rem;
   background: linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%);
+  scroll-margin-top: 5.5rem;
 }
 
 .testimonios-inner {
@@ -819,8 +1158,20 @@ button.btn {
 
 .testimonios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 700px) {
+  .testimonios-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+#testimonios-more[hidden] {
+  display: none !important;
 }
 
 .testimonio-card {
@@ -1035,8 +1386,9 @@ button.btn {
 
 /* Contacto y Mapa Section */
 .contacto {
-  padding: 6rem 5%;
+  padding: 5.5rem 5% 5rem;
   background-color: #f8fafc; /* Gris/azul muy clarito para que resalte el blanco */
+  scroll-margin-top: 5.5rem;
 }
 
 .contacto-wrapper {
