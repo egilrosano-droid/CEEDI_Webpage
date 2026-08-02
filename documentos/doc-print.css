@@ -1,0 +1,303 @@
+/* Estilos compartidos — portafolio documental CEEDI (pantalla + impresión carta) */
+:root {
+  --ink: #1f2937;
+  --muted: #4b5563;
+  --line: #cbd5e1;
+  --brand: #0059a1;
+  --soft: #f8fafc;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Times New Roman", Times, Georgia, serif;
+  color: var(--ink);
+  line-height: 1.4;
+  background: #e5e7eb;
+}
+
+/* Vista pantalla: ancho de hoja carta (8.5 in ≈ 816 px a 96 dpi) */
+.sheet {
+  width: 8.5in;
+  max-width: 100%;
+  min-height: 11in;
+  margin: 1.5rem auto;
+  background: #fff;
+  padding: 0.75in;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.doc-toolbar {
+  width: 8.5in;
+  max-width: 100%;
+  margin: 1rem auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.doc-toolbar a,
+.doc-toolbar button {
+  appearance: none;
+  border: 1px solid #94a3b8;
+  background: #fff;
+  color: #0f172a;
+  padding: 0.45rem 0.85rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.doc-toolbar button.primary {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: #fff;
+}
+
+.doc-head {
+  text-align: center;
+  border-bottom: 2px solid var(--brand);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.doc-head .org {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--brand);
+  font-size: 0.95rem;
+  margin: 0 0 0.2rem;
+}
+
+.doc-head .sub {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.doc-head h1 {
+  font-size: 1.2rem;
+  margin: 0.65rem 0 0.15rem;
+  font-family: "Montserrat", system-ui, sans-serif;
+  color: var(--brand);
+}
+
+.doc-meta {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+h2 {
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-size: 0.95rem;
+  color: var(--brand);
+  margin: 0.95rem 0 0.35rem;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.2rem;
+}
+
+p, li {
+  font-size: 0.88rem;
+  text-align: justify;
+  margin: 0.35rem 0;
+}
+
+ul, ol {
+  padding-left: 1.15rem;
+  margin: 0.35rem 0;
+}
+
+.note {
+  background: var(--soft);
+  border-left: 4px solid var(--brand);
+  padding: 0.5rem 0.7rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 0.85rem;
+  margin: 0.55rem 0;
+}
+
+.field {
+  border-bottom: 1px solid var(--line);
+  min-height: 1.45rem;
+  padding: 0.1rem 0;
+  font-size: 0.85rem;
+}
+
+.field.full { grid-column: 1 / -1; }
+
+.field label {
+  display: block;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--muted);
+  font-family: system-ui, sans-serif;
+}
+
+.blank {
+  display: inline-block;
+  min-width: 6.5rem;
+  border-bottom: 1px solid var(--ink);
+  height: 1em;
+}
+
+.sign-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.sign {
+  text-align: center;
+  padding-top: 2.1rem;
+}
+
+.sign .line {
+  border-top: 1px solid var(--ink);
+  margin: 0 auto 0.3rem;
+  width: 90%;
+}
+
+.sign p {
+  margin: 0.1rem 0;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.check-list li {
+  margin: 0.28rem 0;
+  padding-left: 1.4rem;
+  position: relative;
+}
+
+.check-list li::before {
+  content: "☐";
+  position: absolute;
+  left: 0;
+}
+
+.folio {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+table.plain {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin: 0.55rem 0;
+}
+
+table.plain th,
+table.plain td {
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.4rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+table.plain th {
+  background: var(--soft);
+  font-family: system-ui, sans-serif;
+  font-size: 0.72rem;
+}
+
+.page-break { break-before: page; page-break-before: always; }
+
+/* ——— Impresión tamaño CARTA (Letter 8.5 × 11 in) ——— */
+@page {
+  size: letter;
+  margin: 0.6in;
+}
+
+@media print {
+  html, body {
+    background: #fff !important;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+  .doc-toolbar {
+    display: none !important;
+  }
+
+  .sheet {
+    width: auto;
+    max-width: none;
+    min-height: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    overflow: visible;
+  }
+
+  p, li {
+    font-size: 10.5pt;
+    line-height: 1.35;
+  }
+
+  h2 {
+    font-size: 11.5pt;
+    margin: 10pt 0 4pt;
+  }
+
+  .doc-head h1 {
+    font-size: 14pt;
+  }
+
+  .doc-head .org {
+    font-size: 11pt;
+  }
+
+  .doc-head .sub,
+  .doc-meta {
+    font-size: 9pt;
+  }
+
+  .sign-block {
+    margin-top: 28pt;
+    gap: 24pt;
+  }
+
+  .sign {
+    padding-top: 36pt;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .field-grid,
+  .sign-block { grid-template-columns: 1fr; }
+  .sheet {
+    width: auto;
+    margin: 0.75rem;
+    padding: 1rem;
+    min-height: 0;
+  }
+  .doc-toolbar { width: auto; margin: 0.75rem; }
+}

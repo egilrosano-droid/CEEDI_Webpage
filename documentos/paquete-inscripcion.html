@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imprimir documentos por separado | CEEDI</title>
+  <link rel="stylesheet" href="doc-print.css">
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .sheet h1 { text-align: left; }
+    .doc-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      margin: 0.65rem 0;
+      background: #fff;
+    }
+    .doc-row strong { color: #0059a1; }
+    .doc-row .actions { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+    .doc-row a {
+      text-decoration: none;
+      border: 1px solid #94a3b8;
+      border-radius: 8px;
+      padding: 0.4rem 0.75rem;
+      color: #0f172a;
+      font-size: 0.88rem;
+      background: #fff;
+    }
+    .doc-row a.print {
+      background: #0059a1;
+      border-color: #0059a1;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-toolbar">
+    <a href="index.html">← Portafolio</a>
+  </div>
+  <main class="sheet">
+    <header class="doc-head">
+      <p class="org">CEEDI · Luz María Serradell</p>
+      <h1>Imprimir o guardar PDF — un archivo por documento</h1>
+      <p class="doc-meta">Cada botón abre un documento distinto. Usa Imprimir → Guardar como PDF en cada uno.</p>
+    </header>
+
+    <div class="note">
+      <strong>Importante:</strong> no hay un PDF único. Así el expediente queda separado
+      (aviso, ficha, convenio, etc.) y puedes firmar o archivar hoja por hoja.
+    </div>
+
+    <div class="doc-row">
+      <div><strong>1. Aviso de privacidad</strong></div>
+      <div class="actions">
+        <a href="01-aviso-privacidad.html">Abrir</a>
+        <a class="print" href="01-aviso-privacidad.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>2. Ficha de inscripción</strong></div>
+      <div class="actions">
+        <a href="02-ficha-inscripcion.html">Abrir</a>
+        <a class="print" href="02-ficha-inscripcion.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>3. Convenio de servicios</strong></div>
+      <div class="actions">
+        <a href="03-convenio-servicios.html">Abrir</a>
+        <a class="print" href="03-convenio-servicios.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>4. Reglamento interno</strong></div>
+      <div class="actions">
+        <a href="04-reglamento.html">Abrir</a>
+        <a class="print" href="04-reglamento.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>5. Carta responsiva y recogida</strong></div>
+      <div class="actions">
+        <a href="05-carta-responsiva.html">Abrir</a>
+        <a class="print" href="05-carta-responsiva.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>6. Ficha médica y emergencias</strong></div>
+      <div class="actions">
+        <a href="06-ficha-medica.html">Abrir</a>
+        <a class="print" href="06-ficha-medica.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>7. Autorización de imagen</strong> (opcional)</div>
+      <div class="actions">
+        <a href="07-autorizacion-imagen.html">Abrir</a>
+        <a class="print" href="07-autorizacion-imagen.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+    <div class="doc-row">
+      <div><strong>8. Autorización de traslado</strong> (si aplica)</div>
+      <div class="actions">
+        <a href="08-autorizacion-transporte.html">Abrir</a>
+        <a class="print" href="08-autorizacion-transporte.html" target="_blank" rel="noopener">Abrir para imprimir</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
