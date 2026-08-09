@@ -18,10 +18,12 @@
     <link rel="canonical" href="https://ceedilms.com/">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="experience.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&family=Outfit:wght@300;400;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Montserrat:ital,wght@0,500;0,600;0,700&display=swap"
         rel="stylesheet">
     <script type="application/ld+json">
     {
@@ -59,8 +61,14 @@
     </script>
 </head>
 
-<body>
+<body class="experience-body">
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="pointer-halo" aria-hidden="true"></div>
+    <div class="page-grain" aria-hidden="true"></div>
+
     <section id="inicio" class="hero-section hero-section--verano">
+        <div class="hero-media" aria-hidden="true"></div>
+        <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
         <header class="navbar">
             <div class="logo-container">
                 <picture>
@@ -68,7 +76,7 @@
                     <img src="Logo/logotipo_final.png" alt="Logo CEEDI" class="nav-logo" width="720" height="283">
                 </picture>
                 <div class="logo-text">
-                    <h1 class="logo-title">Centro Educativo de Estimulación y Desarrollo Infantil</h1>
+                    <p class="logo-title">Centro Educativo de Estimulación y Desarrollo Infantil</p>
                     <span class="logo-subtitle">Luz María Serradell</span>
                 </div>
             </div>
@@ -85,14 +93,16 @@
                 </ul>
             </nav>
         </header>
+        <div class="hero-aurora" aria-hidden="true"></div>
         <div class="hero-content">
-            <h1>Club de Tareas y Regularización</h1>
-            <h2 class="hero-subtitle">Más de 25 años formando el futuro</h2>
-            <p>Apoyo académico para niños de 3 a 12 años · Estimulación y acompañamiento de 2 a 5 años</p>
-            <div class="hero-buttons">
-                <a href="#contacto" id="hero-contact" class="btn btn-primary">Contáctanos Hoy</a>
-                <button type="button" id="btn-video" class="btn btn-primary"
-                    aria-haspopup="dialog" aria-controls="video-modal">CURSO DE VERANO 2026</button>
+            <p class="hero-brand" data-split="chars">CEEDI</p>
+            <p class="hero-kicker" data-fade-up>Centro educativo · Iztacalco</p>
+            <h1 class="hero-headline" data-split="words">Club de tareas y regularización</h1>
+            <p class="hero-lede" data-fade-up data-fade-delay="120">Apoyo académico para niños de <strong>3 a 12 años</strong>. Estimulación y acompañamiento de <strong>2 a 5 años</strong>. Más de 25 años en la Ciudad de México.</p>
+            <div class="hero-buttons" data-fade-up data-fade-delay="220">
+                <a href="#contacto" id="hero-contact" class="btn btn-primary">Pedir informes</a>
+                <button type="button" id="btn-video" class="btn btn-summer"
+                    aria-haspopup="dialog" aria-controls="video-modal">Curso de verano 2026</button>
             </div>
         </div>
     </section>
@@ -111,31 +121,33 @@
         </ul>
     </nav>
 
-    <section id="trayectoria" class="trayectoria">
-        <h2>Nuestra Trayectoria: Formando Generaciones</h2>
-        <p class="trayectoria-desc">Más de dos décadas acompañando a familias en la Ciudad de México.</p>
-        <ol class="trayectoria-timeline">
-            <li>
+    <section id="trayectoria" class="trayectoria trayectoria--stage" data-reveal>
+        <div class="trayectoria-head">
+            <h2>Nuestra trayectoria</h2>
+            <p class="trayectoria-desc">Más de dos décadas acompañando a familias en la Ciudad de México.</p>
+        </div>
+        <ol class="trayectoria-rail">
+            <li class="trayectoria-stop" data-reveal>
                 <span class="trayectoria-year">2002</span>
                 <p>Iniciamos labores en la zona sur de la CDMX, en lo que antes era el Jardín de Niños “El Pato Lucas”,
                     en Av. San Francisco 195, Col. Presidentes Ejidales.</p>
             </li>
-            <li>
+            <li class="trayectoria-stop" data-reveal>
                 <span class="trayectoria-year">2003</span>
                 <p>Continuamos a unos pasos, en el número 289 de la misma avenida: nace formalmente el Centro Educativo
                     y crecen más de 10 generaciones.</p>
             </li>
-            <li>
+            <li class="trayectoria-stop" data-reveal>
                 <span class="trayectoria-year">2013</span>
                 <p>Nos mudamos a Calle del Parque 13, Col. Avante, donde terminaron 8 generaciones más, con la misma
                     calidad y excelencia académica del CEEDILMS.</p>
             </li>
-            <li>
+            <li class="trayectoria-stop" data-reveal>
                 <span class="trayectoria-year">Pandemia</span>
                 <p>Cerramos la sede anterior y apoyamos a las familias en Col. Country Club con clases en línea. En ese
                     periodo pasamos de Jardín de Niños a Club de Tareas y Regularización.</p>
             </li>
-            <li>
+            <li class="trayectoria-stop" data-reveal>
                 <span class="trayectoria-year">Hoy</span>
                 <p>Estamos en Calle Playa Hornitos 8, Col. Militar Marte, CP 08830, Iztacalco, CDMX, ofreciendo club de
                     tareas, regularización, estimulación temprana y acompañamiento educativo.</p>
@@ -143,7 +155,7 @@
         </ol>
     </section>
 
-    <section id="mensaje-directora" class="mensaje-directora">
+    <section id="mensaje-directora" class="mensaje-directora" data-reveal>
         <div class="md-image-col">
             <picture>
                 <source srcset="imagenes/directora_ia.webp" type="image/webp">
@@ -152,7 +164,7 @@
             </picture>
         </div>
         <div class="md-text-col">
-            <h2>Vocación, Rigor Académico y Amor por la Infancia</h2>
+            <h2>Vocación, rigor académico y amor por la infancia</h2>
             <p>Cada niño que llega a nuestro Centro trae consigo un universo de posibilidades. Mi misión, desde hace
                 más de <strong>27 años</strong>, ha sido acompañar a cada uno de ellos —y a sus familias— en ese
                 camino de descubrimiento, con la firmeza del conocimiento y la calidez que solo la vocación
@@ -178,52 +190,62 @@
         </div>
     </section>
 
-    <section id="servicios" class="services">
-        <h2>Servicios Educativos</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">📚</div>
-                <h3>Club de Tareas</h3>
-                <p>Acompañamiento diario para preprimaria y primaria, fomentando hábitos de estudio y cumplimiento de
-                    deberes.</p>
+    <section id="servicios" class="services services--editorial" data-reveal>
+        <h2>Servicios educativos</h2>
+        <div class="services-list">
+            <article class="service-row" data-reveal>
+                <span class="service-index" aria-hidden="true">01</span>
+                <div class="service-copy">
+                    <h3>Club de tareas</h3>
+                    <p>Acompañamiento diario para preprimaria y primaria, fomentando hábitos de estudio y cumplimiento de
+                        deberes.</p>
+                </div>
                 <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Club%20de%20Tareas%20en%20CEEDI%20(Col.%20Militar%20Marte)."
-                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🎯</div>
-                <h3>Regularización</h3>
-                <p>Nivelación académica personalizada enfocada en superar retos específicos de aprendizaje.</p>
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir informes</a>
+            </article>
+            <article class="service-row" data-reveal>
+                <span class="service-index" aria-hidden="true">02</span>
+                <div class="service-copy">
+                    <h3>Regularización</h3>
+                    <p>Nivelación académica personalizada enfocada en superar retos específicos de aprendizaje.</p>
+                </div>
                 <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Regularizaci%C3%B3n%20acad%C3%A9mica%20en%20CEEDI."
-                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">✍️</div>
-                <h3>Lecto-Escritura</h3>
-                <p>Preparación sólida para el ingreso a primaria con métodos probados para desarrollar lectura y
-                    escritura.</p>
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir informes</a>
+            </article>
+            <article class="service-row" data-reveal>
+                <span class="service-index" aria-hidden="true">03</span>
+                <div class="service-copy">
+                    <h3>Lecto-escritura</h3>
+                    <p>Preparación sólida para el ingreso a primaria con métodos probados para desarrollar lectura y
+                        escritura.</p>
+                </div>
                 <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Lecto-Escritura%20en%20CEEDI."
-                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🧩</div>
-                <h3>Atención Especializada</h3>
-                <p>Apoyo experto para alumnos con TDAH, dislexia y otras dificultades, con un enfoque cálido y
-                    profesional.</p>
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir informes</a>
+            </article>
+            <article class="service-row" data-reveal>
+                <span class="service-index" aria-hidden="true">04</span>
+                <div class="service-copy">
+                    <h3>Atención especializada</h3>
+                    <p>Apoyo experto para alumnos con TDAH, dislexia y otras dificultades, con un enfoque cálido y
+                        profesional.</p>
+                </div>
                 <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Atenci%C3%B3n%20Especializada%20(TDAH%2C%20dislexia)%20en%20CEEDI."
-                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">🌱</div>
-                <h3>Estimulación y acompañamiento</h3>
-                <p>Actividades de estimulación temprana y psicomotricidad para niños de 2 a 5 años, en un ambiente
-                    cercano y familiar. Cupo limitado.</p>
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir informes</a>
+            </article>
+            <article class="service-row" data-reveal>
+                <span class="service-index" aria-hidden="true">05</span>
+                <div class="service-copy">
+                    <h3>Estimulación y acompañamiento</h3>
+                    <p>Actividades de estimulación temprana y psicomotricidad para niños de 2 a 5 años, en un ambiente
+                        cercano y familiar. Cupo limitado.</p>
+                </div>
                 <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20estimulaci%C3%B3n%20temprana%20y%20acompa%C3%B1amiento%20(2%20a%205%20a%C3%B1os)%20en%20CEEDI."
-                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
-            </div>
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir informes</a>
+            </article>
         </div>
     </section>
 
-    <section id="planes" class="planes" aria-labelledby="planes-title">
+    <section id="planes" class="planes" aria-labelledby="planes-title" data-reveal>
         <div class="planes-inner">
             <h2 id="planes-title">Planes y costos</h2>
             <p class="planes-intro">Tarifas de referencia 2026 (mensuales, salvo que se indique otra cosa). Confirma
@@ -302,7 +324,7 @@
         </div>
     </section>
 
-    <section id="testimonios" class="testimonios" aria-labelledby="testimonios-title">
+    <section id="testimonios" class="testimonios" aria-labelledby="testimonios-title" data-reveal>
         <div class="testimonios-inner">
             <h2 id="testimonios-title">Voces de familias y generaciones</h2>
             <p class="testimonios-intro">Padres, madres y exalumnos comparten su experiencia con el CEEDI. Los
@@ -387,19 +409,19 @@
         </div>
     </section>
 
-    <section id="contacto" class="contacto">
+    <section id="contacto" class="contacto" data-reveal>
         <div class="contacto-wrapper">
             <div class="contacto-info">
-                <h2>Ubicación y Contacto</h2>
+                <h2>Ubicación y contacto</h2>
                 <div class="info-item">
-                    <span>📍</span>
+                    <span class="info-label" aria-hidden="true">Dir</span>
                     <div class="info-text">
                         <h4>Dirección</h4>
                         <p>Calle Playa Hornitos 8, Col. Militar Marte, Iztacalco.</p>
                     </div>
                 </div>
                 <div class="info-item">
-                    <span>📞</span>
+                    <span class="info-label" aria-hidden="true">Wa</span>
                     <div class="info-text">
                         <h4>WhatsApp</h4>
                         <p><a href="https://wa.me/525666661250?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informes%20del%20CEEDI."
@@ -408,21 +430,21 @@
                     </div>
                 </div>
                 <div class="info-item">
-                    <span>📧</span>
+                    <span class="info-label" aria-hidden="true">Mail</span>
                     <div class="info-text">
-                        <h4>Correo Electrónico</h4>
+                        <h4>Correo electrónico</h4>
                         <p><a href="mailto:informes@ceedilms.com" class="enlace-contacto">informes@ceedilms.com</a></p>
                     </div>
                 </div>
                 <div class="info-item">
-                    <span>⏰</span>
+                    <span class="info-label" aria-hidden="true">Hrs</span>
                     <div class="info-text">
                         <h4>Horarios</h4>
                         <p>Lunes a Viernes 8:00 - 19:00 hrs.</p>
                     </div>
                 </div>
                 <div class="info-item">
-                    <span>📄</span>
+                    <span class="info-label" aria-hidden="true">Docs</span>
                     <div class="info-text">
                         <h4>Inscripción</h4>
                         <p><a href="documentos/index.html" class="enlace-contacto">Portafolio documental (formatos para firma)</a></p>
@@ -562,6 +584,15 @@
         })();
     </script>
     <script src="js/testimonios.js" defer></script>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.mjs"
+      }
+    }
+    </script>
+    <script type="module" src="js/immersive.js"></script>
 
 </body>
 
