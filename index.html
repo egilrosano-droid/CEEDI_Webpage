@@ -91,8 +91,6 @@
             <p>Apoyo académico para niños de 3 a 12 años · Estimulación y acompañamiento de 2 a 5 años</p>
             <div class="hero-buttons">
                 <a href="#contacto" id="hero-contact" class="btn btn-primary">Contáctanos Hoy</a>
-                <button type="button" id="btn-video" class="btn btn-primary"
-                    aria-haspopup="dialog" aria-controls="video-modal">CURSO DE VERANO 2026</button>
             </div>
         </div>
     </section>
@@ -461,60 +459,7 @@
 
     <a href="#inicio" class="btn-top" aria-label="Volver al inicio">↑</a>
 
-    <div id="video-modal" class="video-modal" role="dialog" aria-modal="true"
-        aria-labelledby="video-modal-title" aria-hidden="true">
-        <div class="video-modal__panel">
-            <h2 id="video-modal-title" class="visually-hidden">Curso de verano 2026</h2>
-            <button type="button" id="cerrar-video" class="video-modal__close"
-                aria-label="Cerrar ventana de video">✕</button>
-            <div class="video-modal__video-wrap">
-                <video id="video-player" controls preload="metadata" poster="imagenes/portada_final.jpg" playsinline>
-                    <source src="video/ceedi_verano_2026.mp4" type="video/mp4">
-                </video>
-            </div>
-        </div>
-    </div>
-
     <script>
-        (function () {
-            const modal = document.getElementById('video-modal');
-            const video = document.getElementById('video-player');
-            const btnVideo = document.getElementById('btn-video');
-            const closeBtn = document.getElementById('cerrar-video');
-            let lastFocus = null;
-
-            function openModal() {
-                lastFocus = document.activeElement;
-                modal.classList.add('is-open');
-                modal.setAttribute('aria-hidden', 'false');
-                closeBtn.focus();
-                video.play().catch(function () { });
-            }
-
-            function closeModal() {
-                modal.classList.remove('is-open');
-                modal.setAttribute('aria-hidden', 'true');
-                video.pause();
-                video.currentTime = 0;
-                if (lastFocus && typeof lastFocus.focus === 'function') {
-                    lastFocus.focus();
-                }
-            }
-
-            btnVideo.addEventListener('click', openModal);
-            closeBtn.addEventListener('click', closeModal);
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-                    closeModal();
-                }
-            });
-        })();
-
         (function () {
             const hero = document.getElementById('inicio');
             const compact = document.getElementById('nav-compact');
