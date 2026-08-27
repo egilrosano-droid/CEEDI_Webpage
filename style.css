@@ -402,6 +402,25 @@ button.btn {
   opacity: 1;
 }
 
+.btn-tutoria {
+  background-color: var(--color-green);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 18px rgba(12, 157, 76, 0.45);
+}
+
+.btn-tutoria:hover {
+  background-color: #0b8a43;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(12, 157, 76, 0.55);
+}
+
+#hero-tutoria.btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.75rem;
+}
+
 /* Mensaje Directora Section */
 .mensaje-directora {
   padding: 5.5rem 5% 6rem;
