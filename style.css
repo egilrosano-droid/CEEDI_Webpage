@@ -205,6 +205,7 @@ section[id] {
 
   #trayectoria.trayectoria,
   #servicios.services,
+  .tutoria,
   .planes,
   .testimonios,
   .contacto,
@@ -844,6 +845,203 @@ button.btn {
   margin-bottom: 2rem; /* Deja suficiente paso superior al botón contiguo inferior */
 }
 
+.service-card .btn {
+  align-self: flex-start;
+}
+
+/* Tutoría 6° → 1° */
+.tutoria {
+  padding: 5.5rem 5% 5rem;
+  background-color: #ffffff;
+  scroll-margin-top: 5.5rem;
+}
+
+.tutoria-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tutoria-kicker {
+  display: inline-block;
+  background: #fef9c3;
+  color: #854d0e;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+
+.tutoria h2 {
+  font-size: 2.5rem;
+  color: var(--color-blue);
+  font-family: 'Montserrat', var(--font-main);
+  margin-bottom: 0.85rem;
+  line-height: 1.2;
+}
+
+.tutoria-lede {
+  color: #4b5563;
+  max-width: 760px;
+  line-height: 1.7;
+  font-size: 1.08rem;
+  margin-bottom: 2.25rem;
+}
+
+.tutoria-lede a {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.tutoria-lede a:hover {
+  color: var(--color-green);
+}
+
+.tutoria-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.tutoria-stat {
+  background: var(--color-light);
+  border: 1px solid #e2e8f0;
+  border-top: 4px solid var(--color-green);
+  border-radius: 18px;
+  padding: 1.35rem 1.25rem;
+}
+
+.tutoria-stat strong {
+  display: block;
+  font-family: 'Montserrat', var(--font-main);
+  font-size: 1.45rem;
+  color: var(--color-blue);
+  margin-bottom: 0.35rem;
+}
+
+.tutoria-stat span {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tutoria-steps {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  counter-reset: tutoria-step;
+  margin-bottom: 2.5rem;
+}
+
+.tutoria-steps li {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 1.5rem 1.35rem 1.4rem;
+  counter-increment: tutoria-step;
+}
+
+.tutoria-steps li::before {
+  content: counter(tutoria-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.85rem;
+  border-radius: 999px;
+  background: var(--color-blue);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.tutoria-steps h3 {
+  font-family: 'Montserrat', var(--font-main);
+  color: var(--color-blue);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.tutoria-steps p {
+  color: #4b5563;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.tutoria-areas {
+  margin-bottom: 2.25rem;
+}
+
+.tutoria-areas h3 {
+  font-family: 'Montserrat', var(--font-main);
+  color: var(--color-blue);
+  font-size: 1.2rem;
+  margin-bottom: 0.9rem;
+}
+
+.tutoria-areas ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.tutoria-areas li {
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+}
+
+.tutoria-price-note {
+  color: #4b5563;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  margin-bottom: 1.35rem;
+  max-width: 720px;
+}
+
+.tutoria-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.tutoria-link {
+  background: transparent;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+}
+
+.tutoria-link:hover {
+  background: var(--color-blue);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 800px) {
+  .tutoria-stats,
+  .tutoria-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .tutoria h2 {
+    font-size: 2rem;
+  }
+}
+
 /* Planes y costos */
 .planes {
   padding: 5.5rem 5% 5rem;
@@ -992,6 +1190,15 @@ button.btn {
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.6;
+}
+
+.planes-disclaimer a {
+  color: var(--color-blue);
+  font-weight: 600;
+}
+
+.planes-disclaimer a:hover {
+  color: var(--color-green);
 }
 
 @media (max-width: 640px) {
