@@ -40,6 +40,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // 6. Mobile Hamburger Navigation Drawer Handler
+    const hamburgerBtn = document.getElementById('nav-hamburger');
+    const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (hamburgerBtn) {
+        hamburgerBtn.addEventListener('click', () => {
+            document.body.classList.toggle('drawer-open');
+        });
+    }
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            document.body.classList.remove('drawer-open');
+        });
+    });
+
     // Ensure page starts at top on initial load
     if (!window.location.hash) {
         window.scrollTo(0, 0);

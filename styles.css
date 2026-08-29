@@ -298,7 +298,7 @@ a, button, select, input[type="checkbox"] {
     letter-spacing: 0.5px;
 }
 
-/* Separated Nav Actions (Generous spacing between Fototeca & Agendar Cita) */
+/* Separated Nav Actions */
 .nav-actions {
     margin-left: 2rem;
     display: flex;
@@ -319,6 +319,92 @@ a, button, select, input[type="checkbox"] {
 .btn-nav-ultra-compact i {
     width: 8px !important;
     height: 8px !important;
+}
+
+/* Mobile Hamburger Button & Drawer Styling */
+.nav-hamburger {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: var(--navy-dark);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-left: 0.5rem;
+}
+
+.nav-hamburger i {
+    width: 20px;
+    height: 20px;
+}
+
+.nav-hamburger .icon-close {
+    display: none;
+}
+
+body.drawer-open .nav-hamburger {
+    background: var(--gold);
+    border-color: var(--gold);
+}
+
+body.drawer-open .nav-hamburger .icon-open {
+    display: none;
+}
+
+body.drawer-open .nav-hamburger .icon-close {
+    display: block;
+}
+
+/* Mobile Nav Drawer Overlay */
+.mobile-nav-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--navy-dark);
+    z-index: 998;
+    padding: 7rem 2rem 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s var(--ease-smooth);
+}
+
+body.drawer-open .mobile-nav-drawer {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+body.drawer-open {
+    overflow: hidden;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.mobile-nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 1.2rem;
+    font-weight: 700;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+    color: var(--gold);
 }
 
 /* Hero Section */
@@ -1574,6 +1660,9 @@ a, button, select, input[type="checkbox"] {
 
 /* Responsive Rules */
 @media (max-width: 992px) {
+    .nav-links { display: none !important; }
+    .nav-hamburger { display: flex !important; }
+
     .hero-grid, .direccion-grid, .calc-grid-inst, .contacto-grid-inst {
         grid-template-columns: 1fr;
     }
@@ -1585,8 +1674,6 @@ a, button, select, input[type="checkbox"] {
     .form-row--split {
         grid-template-columns: 1fr;
     }
-
-    .nav-links { display: none; }
     
     .hero-left-globe-bleed {
         width: 280px;
