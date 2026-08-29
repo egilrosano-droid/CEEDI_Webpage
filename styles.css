@@ -298,20 +298,27 @@ a, button, select, input[type="checkbox"] {
     letter-spacing: 0.5px;
 }
 
-/* Ultra-Compact Navbar CTA Button ('Agendar Cita' - Reduced size) */
+/* Separated Nav Actions (Generous spacing between Fototeca & Agendar Cita) */
+.nav-actions {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Ultra-Compact Micro Navbar CTA Button ('Agendar Cita' - Further Reduced) */
 .btn-nav-ultra-compact {
-    padding: 0.18rem 0.52rem !important;
-    font-size: 0.62rem !important;
+    padding: 0.12rem 0.42rem !important;
+    font-size: 0.58rem !important;
     font-weight: 700 !important;
-    border-radius: 4px !important;
-    box-shadow: 0 1px 4px var(--gold-glow) !important;
-    gap: 0.2rem !important;
+    border-radius: 3px !important;
+    box-shadow: 0 1px 3px var(--gold-glow) !important;
+    gap: 0.15rem !important;
     letter-spacing: 0.1px !important;
 }
 
 .btn-nav-ultra-compact i {
-    width: 9px !important;
-    height: 9px !important;
+    width: 8px !important;
+    height: 8px !important;
 }
 
 /* Hero Section */
