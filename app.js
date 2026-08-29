@@ -2,6 +2,19 @@
    CEEDI - 3D GEOGRAPHIC GLOBE SPHERE ONLY (PERFECT SPACING & NO TEXT OVERLAP)
    ========================================================================== */
 
+// 0. Disable automatic browser scroll restoration on refresh (prevents jumping to old #hashes on Mac/iPhone)
+if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+}
+
+// Clean hash and scroll to top on reload/refresh
+if (window.performance && window.performance.getEntriesByType('navigation')[0]?.type === 'reload') {
+    if (window.location.hash) {
+        window.history.replaceState(null, null, window.location.pathname);
+    }
+    window.scrollTo(0, 0);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Lucide Icons
     if (window.lucide) {
@@ -11,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. WebGL Ambient Background Scene
     init3DGeometricScene();
 
-    // 3. 3D Globe Sphere Only (Slightly reduced size, clean breathing room)
+    // 3. 3D Globe Sphere Only
     initPureGlobeSphere();
 
     // 4. Institutional Plan Simulator Logic
@@ -26,6 +39,11 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
+
+    // Ensure page starts at top on initial load
+    if (!window.location.hash) {
+        window.scrollTo(0, 0);
+    }
 });
 
 /* ==========================================================================
@@ -139,12 +157,12 @@ function initPureGlobeSphere() {
 
     const worldTexture = new THREE.CanvasTexture(mapCanvas);
 
-    // --- 2. PURE 3D GLOBE SPHERE (SLIGHTLY REDUCED SIZE: RADIUS 2.25 FOR CLEAN FIT) ---
+    // --- 2. PURE 3D GLOBE SPHERE ---
     const globeAssembly = new THREE.Group();
     globeAssembly.rotation.z = axialTilt;
     rootGroup.add(globeAssembly);
 
-    const sphereRadius = 2.25; // Slightly reduced for perfect fit & no text overlap
+    const sphereRadius = 2.25;
     const sphereGeo = new THREE.SphereGeometry(sphereRadius, 64, 64);
     const sphereMat = new THREE.MeshStandardMaterial({
         map: worldTexture,
@@ -194,7 +212,7 @@ function initPureGlobeSphere() {
         renderer.setSize(w, h);
     });
 
-    // Animation Loop (Continuous smooth rotation on tilted axis)
+    // Animation Loop
     function animateGlobe() {
         requestAnimationFrame(animateGlobe);
 
