@@ -1,68 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fototeca | Centro Educativo CEEDI</title>
-    <meta name="description"
-        content="Acervo generacional del Centro Educativo de Estimulación y Desarrollo Infantil, Iztacalco, CDMX.">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="es_MX">
-    <meta property="og:url" content="https://ceedilms.com/generaciones/">
-    <meta property="og:title" content="Fototeca | Centro Educativo CEEDI">
-    <meta property="og:description"
-        content="Acervo generacional del Centro Educativo de Estimulación y Desarrollo Infantil, Iztacalco, CDMX.">
-    <meta property="og:image" content="https://ceedilms.com/imagenes/portada_final.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="canonical" href="https://ceedilms.com/generaciones/">
-    <link rel="stylesheet" href="../style.css">
+    <title>Fototeca &amp; Acervo Generacional | Centro Educativo CEEDI</title>
+    <meta name="description" content="Acervo generacional del Centro Educativo de Estimulación y Desarrollo Infantil, Iztacalco, CDMX. Fotografías históricas de nuestras generaciones.">
+    
+    <!-- Google Fonts: Playfair Display + Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&family=Outfit:wght@300;400;600;700&display=swap"
-        rel="stylesheet">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css">
 
-<body class="page-fototeca">
-    <div class="page-wrapper">
-        <a href="../index.html" class="back-link">← Volver al Inicio</a>
-        <h1 class="page-title">Fototeca</h1>
-        <div class="gallery-grid">
-            <div class="gallery-card">
-                <img src="generacion_2003.jpg" alt="Generación 2003" loading="lazy">
-                <span>Generación 2003</span>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body.fototeca-page-bg {
+            background-color: var(--navy-dark);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 3rem 0 5rem 0;
+        }
+
+        .fototeca-header-wrap {
+            margin-bottom: 3.5rem;
+        }
+
+        .back-nav-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+
+        .back-nav-btn:hover {
+            transform: translateX(-4px);
+            color: #ffffff;
+        }
+
+        .fototeca-hero-title {
+            font-family: var(--font-sans);
+            font-size: clamp(2.4rem, 4.5vw, 3.5rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        .fototeca-hero-desc {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            max-width: 700px;
+        }
+
+        .generaciones-standalone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .gen-card-item {
+            position: relative;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            height: 340px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s var(--ease-smooth), border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gen-card-item:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 25px 50px rgba(217, 119, 6, 0.2);
+        }
+
+        .gen-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            opacity: 0.88;
+            transition: transform 0.6s var(--ease-smooth), opacity 0.3s ease;
+        }
+
+        .gen-card-item:hover .gen-card-img {
+            transform: scale(1.06);
+            opacity: 0.98;
+        }
+
+        .gen-card-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 1.75rem;
+            background: linear-gradient(180deg, transparent 0%, rgba(15, 23, 42, 0.95) 75%);
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        .gen-badge-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
+        }
+
+        .gen-card-title {
+            font-family: var(--font-sans);
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .gen-footer-note {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body class="institutional-theme fototeca-page-bg">
+
+    <div class="container">
+        <div class="fototeca-header-wrap">
+            <a href="../index.html" class="back-nav-btn">
+                <i data-lucide="arrow-left"></i>
+                <span>Volver al Inicio</span>
+            </a>
+
+            <span class="section-tag">ACERVO GENERACIONAL CEEDI</span>
+            <h1 class="fototeca-hero-title">Fototeca <span class="serif-italic">Institucional</span></h1>
+            <p class="fototeca-hero-desc">Acervo de generaciones del Centro Educativo de Estimulación y Desarrollo Infantil Luz María Serradell (2002 - 2026), Col. Militar Marte, CDMX.</p>
+        </div>
+
+        <div class="generaciones-standalone-grid">
+            <div class="gen-card-item">
+                <img src="generacion_2003.jpg" alt="Generación 2003 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2003</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2012.jpg" alt="Generación 2012" loading="lazy">
-                <span>Generación 2012</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2012.jpg" alt="Generación 2012 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2012</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2014.jpg" alt="Generación 2014" loading="lazy">
-                <span>Generación 2014</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2014.jpg" alt="Generación 2014 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2014</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2015.jpg" alt="Generación 2015" loading="lazy">
-                <span>Generación 2015</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2015.jpg" alt="Generación 2015 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2015</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2017.jpg" alt="Generación 2017" loading="lazy">
-                <span>Generación 2017</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2017.jpg" alt="Generación 2017 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2017</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2018.jpg" alt="Generación 2018" loading="lazy">
-                <span>Generación 2018</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2018.jpg" alt="Generación 2018 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2018</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2019.jpg" alt="Generación 2019" loading="lazy">
-                <span>Generación 2019</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2019.jpg" alt="Generación 2019 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2019</h3>
+                </div>
             </div>
-            <div class="gallery-card">
-                <img src="generacion_2020.jpg" alt="Generación 2020" loading="lazy">
-                <span>Generación 2020</span>
+
+            <div class="gen-card-item">
+                <img src="generacion_2020.jpg" alt="Generación 2020 CEEDI" loading="lazy" class="gen-card-img">
+                <div class="gen-card-overlay">
+                    <span class="gen-badge-tag">HISTORIA CEEDI</span>
+                    <h3 class="gen-card-title">Generación 2020</h3>
+                </div>
             </div>
         </div>
-    </div>
-</body>
 
+        <div class="gen-footer-note">
+            <p>CEEDI · Centro Educativo de Estimulación y Desarrollo Infantil Luz María Serradell © 2026</p>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
 </html>

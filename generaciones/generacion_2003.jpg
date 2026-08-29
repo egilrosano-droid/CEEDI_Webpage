@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro Educativo de Estimulación y Desarrollo Infantil | Club de Tareas y Regularización</title>
+    <meta name="description"
+        content="Apoyo académico especializado en la Col. Militar Marte, Iztacalco. Club de tareas, lecto-escritura y atención pedagógica con más de 25 años de experiencia académica.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:url" content="https://ceedilms.com/">
+    <meta property="og:title"
+        content="Centro Educativo de Estimulación y Desarrollo Infantil | Club de Tareas y Regularización">
+    <meta property="og:description"
+        content="Apoyo académico especializado en la Col. Militar Marte, Iztacalco. Club de tareas, lecto-escritura y atención pedagógica con más de 25 años de experiencia académica.">
+    <meta property="og:image" content="https://ceedilms.com/imagenes/portada_final.jpg">
+    <link rel="canonical" href="https://ceedilms.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700&family=Outfit:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "name": "Centro Educativo de Estimulación y Desarrollo Infantil Luz María Serradell",
+      "alternateName": "CEEDILMS",
+      "url": "https://ceedilms.com/",
+      "logo": "https://ceedilms.com/Logo/logotipo_final.png",
+      "image": "https://ceedilms.com/imagenes/portada_final.jpg",
+      "email": "informes@ceedilms.com",
+      "telephone": "+525666661250",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Playa Hornitos 8",
+        "addressLocality": "Iztacalco",
+        "addressRegion": "Ciudad de México",
+        "postalCode": "08830",
+        "addressCountry": "MX"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 19.3793444,
+        "longitude": -99.1234726
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      "areaServed": "Col. Militar Marte, Iztacalco, CDMX",
+      "sameAs": ["https://wa.me/525666661250"]
+    }
+    </script>
+</head>
+
+<body>
+    <section id="inicio" class="hero-section hero-section--verano">
+        <header class="navbar">
+            <div class="logo-container">
+                <picture>
+                    <source srcset="Logo/logotipo_final.webp" type="image/webp">
+                    <img src="Logo/logotipo_final.png" alt="Logo CEEDI" class="nav-logo" width="720" height="283">
+                </picture>
+                <div class="logo-text">
+                    <h1 class="logo-title">Centro Educativo de Estimulación y Desarrollo Infantil</h1>
+                    <span class="logo-subtitle">Luz María Serradell</span>
+                </div>
+            </div>
+            <nav aria-label="Secciones principales">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#trayectoria">Trayectoria</a></li>
+                    <li><a href="#mensaje-directora">Vocación</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#tutoria">Tutoría</a></li>
+                    <li><a href="#planes">Planes</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="generaciones/index.html">Fototeca</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <h1>Club de Tareas y Regularización</h1>
+            <h2 class="hero-subtitle">Más de 25 años formando el futuro</h2>
+            <p>Apoyo académico para niños de 3 a 12 años · Estimulación y acompañamiento de 2 a 5 años</p>
+            <div class="hero-buttons">
+                <a href="#contacto" id="hero-contact" class="btn btn-primary">Contáctanos Hoy</a>
+                <a href="#tutoria" id="hero-tutoria" class="btn btn-tutoria">Nueva tutoría 6° → 1°</a>
+            </div>
+        </div>
+    </section>
+
+    <nav id="nav-compact" class="nav-compact" aria-label="Navegación al desplazarse" aria-hidden="true">
+        <a href="#inicio" class="nav-compact__brand">CEEDI</a>
+        <ul class="nav-compact__list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#trayectoria">Trayectoria</a></li>
+            <li><a href="#mensaje-directora">Vocación</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#tutoria">Tutoría</a></li>
+            <li><a href="#planes">Planes</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="generaciones/index.html">Fototeca</a></li>
+        </ul>
+    </nav>
+
+    <section id="trayectoria" class="trayectoria">
+        <h2>Nuestra Trayectoria: Formando Generaciones</h2>
+        <p class="trayectoria-desc">Más de dos décadas acompañando a familias en la Ciudad de México.</p>
+        <ol class="trayectoria-timeline">
+            <li>
+                <span class="trayectoria-year">2002</span>
+                <p>Iniciamos labores en la zona sur de la CDMX, en lo que antes era el Jardín de Niños “El Pato Lucas”,
+                    en Av. San Francisco 195, Col. Presidentes Ejidales.</p>
+            </li>
+            <li>
+                <span class="trayectoria-year">2003</span>
+                <p>Continuamos a unos pasos, en el número 289 de la misma avenida: nace formalmente el Centro Educativo
+                    y crecen más de 10 generaciones.</p>
+            </li>
+            <li>
+                <span class="trayectoria-year">2013</span>
+                <p>Nos mudamos a Calle del Parque 13, Col. Avante, donde terminaron 8 generaciones más, con la misma
+                    calidad y excelencia académica del CEEDILMS.</p>
+            </li>
+            <li>
+                <span class="trayectoria-year">Pandemia</span>
+                <p>Cerramos la sede anterior y apoyamos a las familias en Col. Country Club con clases en línea. En ese
+                    periodo pasamos de Jardín de Niños a Club de Tareas y Regularización.</p>
+            </li>
+            <li>
+                <span class="trayectoria-year">Hoy</span>
+                <p>Estamos en Calle Playa Hornitos 8, Col. Militar Marte, CP 08830, Iztacalco, CDMX, ofreciendo club de
+                    tareas, regularización, estimulación temprana y acompañamiento educativo.</p>
+            </li>
+        </ol>
+    </section>
+
+    <section id="mensaje-directora" class="mensaje-directora">
+        <div class="md-image-col">
+            <picture>
+                <source srcset="imagenes/directora_ia.webp" type="image/webp">
+                <img src="imagenes/directora_ia.jpg" alt="Lic. Esperanza Margarita Puente Aguilar" loading="lazy"
+                    width="800" height="800">
+            </picture>
+        </div>
+        <div class="md-text-col">
+            <h2>Vocación, Rigor Académico y Amor por la Infancia</h2>
+            <p>Cada niño que llega a nuestro Centro trae consigo un universo de posibilidades. Mi misión, desde hace
+                más de <strong>27 años</strong>, ha sido acompañar a cada uno de ellos —y a sus familias— en ese
+                camino de descubrimiento, con la firmeza del conocimiento y la calidez que solo la vocación
+                verdadera puede ofrecer.</p>
+
+            <p>Mi formación académica está sólidamente fundamentada: soy <strong>Licenciada en Pedagogía por la
+                    UNAM (1994)</strong>, <strong>Licenciada en Educación Preescolar</strong> con
+                reconocimiento de la SEP (2015), y <strong>obtuve una Maestría en Psicopedagogía Educativa
+                    (2025)</strong>.
+                Complemento
+                esta preparación con especialidades en <em>Nivelación Didáctica en Preescolar y Primaria</em>,
+                lo que me permite diseñar estrategias de aprendizaje precisas y efectivas para cada etapa del
+                desarrollo infantil.</p>
+
+            <p>El CEEDI no es solo un centro de apoyo académico: es un espacio donde los niños aprenden a creer en
+                sí mismos. Nuestra trayectoria es el testimonio de cientos de familias que, año tras año, depositan
+                en nosotros su confianza más preciada: el futuro de sus hijos.</p>
+
+            <p class="directora-firma">
+                <strong>Lic. Esperanza Margarita Puente Aguilar</strong><br>
+                Directora Académica
+            </p>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Servicios Educativos</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📚</div>
+                <h3>Club de Tareas</h3>
+                <p>Acompañamiento diario para preprimaria y primaria, fomentando hábitos de estudio y cumplimiento de
+                    deberes.</p>
+                <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Club%20de%20Tareas%20en%20CEEDI%20(Col.%20Militar%20Marte)."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Regularización</h3>
+                <p>Nivelación académica personalizada enfocada en superar retos específicos de aprendizaje.</p>
+                <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Regularizaci%C3%B3n%20acad%C3%A9mica%20en%20CEEDI."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✍️</div>
+                <h3>Lecto-Escritura</h3>
+                <p>Preparación sólida para el ingreso a primaria con métodos probados para desarrollar lectura y
+                    escritura.</p>
+                <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Lecto-Escritura%20en%20CEEDI."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🧩</div>
+                <h3>Atención Especializada</h3>
+                <p>Apoyo experto para alumnos con TDAH, dislexia y otras dificultades, con un enfoque cálido y
+                    profesional.</p>
+                <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20Atenci%C3%B3n%20Especializada%20(TDAH%2C%20dislexia)%20en%20CEEDI."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌱</div>
+                <h3>Estimulación y acompañamiento</h3>
+                <p>Actividades de estimulación temprana y psicomotricidad para niños de 2 a 5 años, en un ambiente
+                    cercano y familiar. Cupo limitado.</p>
+                <a href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20estimulaci%C3%B3n%20temprana%20y%20acompa%C3%B1amiento%20(2%20a%205%20a%C3%B1os)%20en%20CEEDI."
+                    target="_blank" rel="noopener noreferrer" class="btn-whatsapp">Pedir Informes</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎒</div>
+                <h3>Tutoría 6° → 1°</h3>
+                <p>Acompañamos el paso de 6° de primaria a 1° de secundaria con diagnóstico, plan por tema y sesiones
+                    en CEEDI, apoyados en AulaIQ Tutoría.</p>
+                <a href="#tutoria" class="btn btn-primary">Conocer el programa</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="tutoria" class="tutoria" aria-labelledby="tutoria-title">
+        <div class="tutoria-inner">
+            <p class="tutoria-kicker">Nueva · 6° de primaria a 1° de secundaria</p>
+            <h2 id="tutoria-title">Tutoría para el paso a secundaria</h2>
+            <p class="tutoria-lede">Abrimos un programa de tutoría para estudiantes que terminan 6° de primaria y
+                entran a 1° de secundaria. En CEEDI diagnosticamos contra el programa oficial, armamos un plan de
+                refuerzo por tema y trabajamos cada sesión con material listo. El acompañamiento se apoya en
+                <a href="https://aulaiq.com.mx/tutoria" target="_blank" rel="noopener noreferrer">AulaIQ Tutoría</a>.</p>
+
+            <div class="tutoria-stats" role="list">
+                <div class="tutoria-stat" role="listitem">
+                    <strong>7 áreas</strong>
+                    <span>diagnosticadas contra el programa oficial de 6° de primaria</span>
+                </div>
+                <div class="tutoria-stat" role="listitem">
+                    <strong>13 materias</strong>
+                    <span>del plan de 1° de secundaria, con refuerzo o adelanto según el caso</span>
+                </div>
+                <div class="tutoria-stat" role="listitem">
+                    <strong>0 cuentas</strong>
+                    <span>que el alumno tenga que crear o recordar: responde con un enlace</span>
+                </div>
+            </div>
+
+            <ol class="tutoria-steps">
+                <li>
+                    <h3>Diagnóstico real</h3>
+                    <p>Un examen por cada una de las 7 áreas de 6°. Vemos qué temas ya domina y cuáles hay que
+                        reforzar, no solo una calificación global.</p>
+                </li>
+                <li>
+                    <h3>Plan por tema</h3>
+                    <p>Elegimos qué temas trabajar. Cada uno se convierte en 2 a 5 días de sesión, al ritmo del
+                        estudiante, no con un calendario rígido.</p>
+                </li>
+                <li>
+                    <h3>Sesiones en CEEDI</h3>
+                    <p>Cada día: explicación, ejemplo resuelto y ejercicios. La maestra llega con el material
+                        preparado; la familia ve avance concreto.</p>
+                </li>
+            </ol>
+
+            <div class="tutoria-areas">
+                <h3>Las 7 áreas del diagnóstico de 6°</h3>
+                <ul>
+                    <li>Lenguajes</li>
+                    <li>Matemáticas</li>
+                    <li>Saberes y Pensamiento Científico</li>
+                    <li>Historia</li>
+                    <li>Geografía</li>
+                    <li>Ética, Naturaleza y Sociedades</li>
+                    <li>De lo Humano y lo Comunitario</li>
+                </ul>
+            </div>
+
+            <p class="tutoria-price-note">Se cotiza <strong>por sesión</strong>; no hay un precio fijo. Cada familia
+                recibe una propuesta según las sesiones que necesite el estudiante.</p>
+
+            <div class="tutoria-actions">
+                <a class="btn-whatsapp"
+                    href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20sobre%20la%20tutor%C3%ADa%20de%206%C2%B0%20a%201%C2%B0%20de%20secundaria%20en%20CEEDI."
+                    target="_blank" rel="noopener noreferrer">Pedir informes</a>
+                <a class="btn tutoria-link" href="https://aulaiq.com.mx/tutoria" target="_blank"
+                    rel="noopener noreferrer">Conoce AulaIQ Tutoría</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="planes" class="planes" aria-labelledby="planes-title">
+        <div class="planes-inner">
+            <h2 id="planes-title">Planes y costos</h2>
+            <p class="planes-intro">Tarifas de referencia 2026 (mensuales, salvo que se indique otra cosa). Confirma
+                disponibilidad y detalles por WhatsApp: pueden ajustar según horario y necesidades de cada familia.</p>
+
+            <div class="planes-block">
+                <h3>Club de tareas y regularización <span class="planes-ages">3 a 12 años</span></h3>
+                <p class="planes-block-note">Horario acorde a la salida de la escuela. Apoyo en tareas, hábitos de estudio
+                    y nivelación académica.</p>
+                <div class="planes-grid">
+                    <article class="plan-card">
+                        <h4>Club completo</h4>
+                        <p class="plan-includes">Tareas, regularización, alimentos (comida) y traslado escuela–CEEDI–casa
+                            <em>sujeto a ruta y disponibilidad</em>.</p>
+                        <p class="plan-price">$3,000 <span>mensuales</span></p>
+                        <a class="btn-whatsapp"
+                            href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20del%20Club%20completo%20(%243000)%20en%20CEEDI."
+                            target="_blank" rel="noopener noreferrer">Pedir este plan</a>
+                    </article>
+                    <article class="plan-card">
+                        <h4>Club con alimentos</h4>
+                        <p class="plan-includes">Club de tareas con comida incluida.</p>
+                        <p class="plan-price">$2,500 <span>mensuales</span></p>
+                        <a class="btn-whatsapp"
+                            href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20del%20Club%20con%20alimentos%20(%242500)%20en%20CEEDI."
+                            target="_blank" rel="noopener noreferrer">Pedir este plan</a>
+                    </article>
+                    <article class="plan-card">
+                        <h4>Regularización</h4>
+                        <p class="plan-includes">2 horas diarias, de lunes a jueves.</p>
+                        <p class="plan-price">$1,800 <span>mensuales</span></p>
+                        <a class="btn-whatsapp"
+                            href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20de%20Regularizaci%C3%B3n%202%20hrs%20(%241800)%20en%20CEEDI."
+                            target="_blank" rel="noopener noreferrer">Pedir este plan</a>
+                    </article>
+                    <article class="plan-card plan-card--accent">
+                        <h4>Por hora</h4>
+                        <p class="plan-includes">Sesión de apoyo o regularización por hora.</p>
+                        <p class="plan-price">$95 <span>por hora</span></p>
+                        <a class="btn-whatsapp"
+                            href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20de%20sesiones%20por%20hora%20(%2495)%20en%20CEEDI."
+                            target="_blank" rel="noopener noreferrer">Pedir este plan</a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="planes-block planes-block--soft">
+                <h3>Estimulación temprana y acompañamiento <span class="planes-ages">2 a 5 años</span></h3>
+                <p class="planes-block-note">Actividades de estimulación y desarrollo psicomotor en un espacio familiar.
+                    <strong>Cupo limitado.</strong> No es una guardería ni estancia infantil institucional: es
+                    acompañamiento educativo y de estimulación. Pregunta horarios y disponibilidad.</p>
+                <div class="planes-grid planes-grid--two">
+                    <article class="plan-card">
+                        <h4>Jornada extendida</h4>
+                        <p class="plan-includes">Acompañamiento en horario amplio (orientativo 7:45–18:00), con desayuno y
+                            comida. Detalles del menú y rutina por WhatsApp.</p>
+                        <p class="plan-price">$3,100 <span>mensuales</span></p>
+                        <a class="btn-whatsapp"
+                            href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20de%20estimulaci%C3%B3n%20y%20acompa%C3%B1amiento%20jornada%20extendida%20(%243100)%20en%20CEEDI."
+                            target="_blank" rel="noopener noreferrer">Consultar cupo</a>
+                    </article>
+                    <article class="plan-card">
+                        <h4>Jornada matutina</h4>
+                        <p class="plan-includes">Acompañamiento en horario matutino (orientativo 9:00–13:00), con
+                            desayuno según el plan acordado.</p>
+                        <p class="plan-price">$2,350 <span>mensuales</span></p>
+                        <a class="btn-whatsapp"
+                            href="https://wa.me/525666661250?text=Hola%2C%20quiero%20informes%20de%20estimulaci%C3%B3n%20y%20acompa%C3%B1amiento%20jornada%20matutina%20(%242350)%20en%20CEEDI."
+                            target="_blank" rel="noopener noreferrer">Consultar cupo</a>
+                    </article>
+                </div>
+            </div>
+
+            <p class="planes-disclaimer">Los costos son referenciales y pueden actualizarse. La inscripción o materiales,
+                si aplican, se confirman al momento de la entrevista. La <a href="#tutoria">tutoría 6° → 1° de
+                    secundaria</a> se cotiza por sesión, sin precio fijo; pídenos informes por WhatsApp.</p>
+        </div>
+    </section>
+
+    <section id="testimonios" class="testimonios" aria-labelledby="testimonios-title">
+        <div class="testimonios-inner">
+            <h2 id="testimonios-title">Voces de familias y generaciones</h2>
+            <p class="testimonios-intro">Padres, madres y exalumnos comparten su experiencia con el CEEDI. Los
+                testimonios se publican tras una breve revisión.</p>
+
+            <div class="testimonios-filters" role="group" aria-label="Filtrar testimonios">
+                <button type="button" class="testimonios-filter is-active" data-filter="todos">Todos</button>
+                <button type="button" class="testimonios-filter" data-filter="familia">Padres y tutores</button>
+                <button type="button" class="testimonios-filter" data-filter="exalumno">Exalumnos</button>
+            </div>
+
+            <div id="testimonios-grid" class="testimonios-grid" aria-live="polite"></div>
+            <p id="testimonios-empty" class="testimonios-empty" hidden>Aún no hay testimonios en esta categoría. ¡Sé de
+                los primeros en compartir el tuyo!</p>
+            <div class="testimonios-more-wrap">
+                <button type="button" id="testimonios-more" class="btn btn-primary" hidden>Ver más testimonios</button>
+            </div>
+
+            <div class="testimonios-form-card">
+                <h3>Comparte tu testimonio</h3>
+                <p class="testimonios-form-note">Si eres mamá, papá, tutor o exalumno (¡también si ahora traes a tu hijo
+                    o hija!), cuéntanos tu experiencia. Revisamos cada mensaje antes de publicarlo.</p>
+
+                <form id="form-testimonio" class="testimonios-form"
+                    action="https://formsubmit.co/informes@ceedilms.com" method="POST">
+                    <input type="hidden" name="_subject" value="Nuevo testimonio para la web CEEDI">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://ceedilms.com/?enviado=1#testimonios">
+                    <input type="text" name="_honey" class="honey-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                    <div class="form-row">
+                        <label for="testimonio-nombre">Nombre o cómo quieres aparecer</label>
+                        <input id="testimonio-nombre" name="nombre" type="text" required maxlength="80"
+                            placeholder="Ej. Familia García / Ana M.">
+                    </div>
+
+                    <div class="form-row form-row--split">
+                        <div>
+                            <label for="testimonio-rol">Soy</label>
+                            <select id="testimonio-rol" name="rol" required>
+                                <option value="">Selecciona…</option>
+                                <option value="padre">Padre / Madre / Tutor</option>
+                                <option value="exalumno">Exalumno / Exalumna</option>
+                                <option value="ambos">Exalumno/a y ahora padre/madre</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="testimonio-anio">Año (opcional)</label>
+                            <input id="testimonio-anio" name="anio" type="text" maxlength="20"
+                                placeholder="Ej. 2026">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="testimonio-relacion">Relación con el CEEDI (opcional)</label>
+                        <input id="testimonio-relacion" name="relacion" type="text" maxlength="120"
+                            placeholder="Ej. Mamá de alumno de Club de Tareas / Exalumna generación 2012">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="testimonio-texto">Tu testimonio</label>
+                        <textarea id="testimonio-texto" name="testimonio" required maxlength="800" rows="5"
+                            placeholder="Cuéntanos qué ha significado el CEEDI para ti o tu familia…"></textarea>
+                        <span class="form-hint"><span id="testimonio-count">0</span>/800</span>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="testimonio-contacto">Correo o WhatsApp (solo para contacto interno, no se publica)</label>
+                        <input id="testimonio-contacto" name="contacto" type="text" maxlength="120"
+                            placeholder="Opcional">
+                    </div>
+
+                    <div class="testimonios-form-actions">
+                        <button type="submit" class="btn btn-primary">Enviar testimonio</button>
+                        <a id="testimonio-wa" class="btn-whatsapp" href="#" target="_blank" rel="noopener noreferrer">Enviar
+                            por WhatsApp</a>
+                    </div>
+                    <p id="testimonio-status" class="testimonios-status" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contacto">
+        <div class="contacto-wrapper">
+            <div class="contacto-info">
+                <h2>Ubicación y Contacto</h2>
+                <div class="info-item">
+                    <span>📍</span>
+                    <div class="info-text">
+                        <h4>Dirección</h4>
+                        <p>Calle Playa Hornitos 8, Col. Militar Marte, Iztacalco.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>📞</span>
+                    <div class="info-text">
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/525666661250?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informes%20del%20CEEDI."
+                                target="_blank" rel="noopener noreferrer" class="enlace-contacto">56 6666 1250</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>📧</span>
+                    <div class="info-text">
+                        <h4>Correo Electrónico</h4>
+                        <p><a href="/cdn-cgi/l/email-protection#7b12151d1409161e083b181e1e1f1217160855181416" class="enlace-contacto"><span class="__cf_email__" data-cfemail="bad3d4dcd5c8d7dfc9fad9dfdfded3d6d7c994d9d5d7">[email&#160;protected]</span></a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>⏰</span>
+                    <div class="info-text">
+                        <h4>Horarios</h4>
+                        <p>Lunes a Viernes 8:00 - 19:00 hrs.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <span>📄</span>
+                    <div class="info-text">
+                        <h4>Inscripción</h4>
+                        <p><a href="documentos/index.html" class="enlace-contacto">Portafolio documental (formatos para firma)</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-mapa">
+                <iframe class="map-embed"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.51475586617!2d-99.1234726!3d19.3793444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fe3047715f33%3A0x2863690d54024f2b!2sPlaya%20Hornitos%208%2C%20Militar%20Marte%2C%20Iztacalco%2C%2008830%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses-419!2smx!4v1713200000000!5m2!1ses-419!2smx"
+                    width="100%" height="100%" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="Ubicación en Google Maps">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="site-footer-inner">
+            <span class="site-footer-text">Las actividades de este establecimiento se centran en club de tareas,
+                regularización, tutoría 6°–1°, estimulación temprana y acompañamiento educativo. © 2026 Todos los
+                derechos reservados | by</span>
+            <img src="Logo/generia_logo_sin_fondo.png" alt="Crédito Generia" class="site-footer-mark">
+        </div>
+    </footer>
+
+    <a href="https://wa.me/525666661250?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20informes%20del%20CEEDI."
+        class="btn-whatsapp-float" target="_blank" rel="noopener noreferrer"
+        aria-label="Escribir por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
+            <path fill="currentColor"
+                d="M16.01 2.03C8.62 2.03 2.6 8.04 2.6 15.43c0 2.36.62 4.66 1.8 6.69L2.4 29.7l7.8-2.04a13.3 13.3 0 0 0 5.81 1.34h.01c7.39 0 13.4-6.01 13.4-13.4 0-3.58-1.39-6.94-3.92-9.47a13.3 13.3 0 0 0-9.49-3.9zm0 24.46h-.01a11.07 11.07 0 0 1-5.64-1.54l-.4-.24-4.63 1.21 1.23-4.51-.26-.46a11.05 11.05 0 0 1-1.7-5.9c0-6.11 4.97-11.08 11.09-11.08 2.96 0 5.74 1.15 7.83 3.25a11.02 11.02 0 0 1 3.25 7.84c0 6.11-4.97 11.08-11.08 11.08zm6.08-8.3c-.33-.17-1.97-.97-2.28-1.08-.3-.11-.53-.17-.75.17-.22.33-.87 1.08-1.06 1.3-.2.22-.39.25-.72.08-.33-.17-1.4-.52-2.67-1.65-.99-.88-1.65-1.97-1.85-2.3-.19-.33-.02-.51.15-.68.15-.15.33-.39.5-.58.17-.2.22-.33.33-.55.11-.22.06-.41-.03-.58-.08-.17-.75-1.8-1.03-2.47-.27-.65-.55-.56-.75-.57h-.64c-.22 0-.58.08-.88.41-.3.33-1.16 1.13-1.16 2.76s1.19 3.2 1.35 3.42c.17.22 2.34 3.57 5.66 5 .79.34 1.41.55 1.89.7.79.25 1.51.22 2.08.13.64-.1 1.97-.81 2.25-1.58.28-.78.28-1.44.19-1.58-.08-.14-.3-.22-.64-.39z" />
+        </svg>
+        <span class="btn-whatsapp-float__label">WhatsApp</span>
+    </a>
+
+    <a href="#inicio" class="btn-top" aria-label="Volver al inicio">↑</a>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        (function () {
+            const hero = document.getElementById('inicio');
+            const compact = document.getElementById('nav-compact');
+            if (!hero || !compact) return;
+
+            const sync = function (show) {
+                compact.classList.toggle('is-visible', show);
+                compact.setAttribute('aria-hidden', show ? 'false' : 'true');
+            };
+
+            if ('IntersectionObserver' in window) {
+                const io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        sync(!entry.isIntersecting);
+                    });
+                }, { root: null, threshold: 0, rootMargin: '-8% 0px 0px 0px' });
+                io.observe(hero);
+            } else {
+                const onScroll = function () {
+                    sync(window.scrollY > hero.offsetHeight * 0.55);
+                };
+                window.addEventListener('scroll', onScroll, { passive: true });
+                onScroll();
+            }
+
+            const sectionIds = ['inicio', 'trayectoria', 'mensaje-directora', 'servicios', 'tutoria', 'planes', 'testimonios', 'contacto'];
+            const compactLinks = compact.querySelectorAll('.nav-compact__list a[href^="#"]');
+            const markActive = function () {
+                let current = 'inicio';
+                const offset = 96;
+                sectionIds.forEach(function (id) {
+                    const el = document.getElementById(id);
+                    if (!el) return;
+                    if (el.getBoundingClientRect().top - offset <= 0) {
+                        current = id;
+                    }
+                });
+                compactLinks.forEach(function (link) {
+                    const href = link.getAttribute('href') || '';
+                    link.classList.toggle('is-active', href === '#' + current);
+                });
+            };
+            window.addEventListener('scroll', markActive, { passive: true });
+            markActive();
+        })();
+    </script>
+    <script src="js/testimonios.js" defer></script>
+
+</body>
+
+</html>
