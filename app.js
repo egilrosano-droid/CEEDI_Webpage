@@ -40,20 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 6. Mobile Hamburger Navigation Drawer Handler
+    // 6. Mobile Hamburger Navigation Drawer Handler (iOS Touch & Click Supported)
     const hamburgerBtn = document.getElementById('nav-hamburger');
     const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
     if (hamburgerBtn) {
-        hamburgerBtn.addEventListener('click', () => {
+        const toggleDrawer = (e) => {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
             document.body.classList.toggle('drawer-open');
-        });
+        };
+        hamburgerBtn.addEventListener('click', toggleDrawer);
+        hamburgerBtn.addEventListener('touchend', toggleDrawer);
     }
 
     mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        const closeHandler = () => {
             document.body.classList.remove('drawer-open');
-        });
+        };
+        link.addEventListener('click', closeHandler);
+        link.addEventListener('touchend', closeHandler);
     });
 
     // Ensure page starts at top on initial load

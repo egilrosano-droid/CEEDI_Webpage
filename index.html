@@ -12,14 +12,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=20260829e">
-    <link rel="stylesheet" href="styles.css?v=20260829e">
+    <link rel="stylesheet" href="style.css?v=20260829g">
+    <link rel="stylesheet" href="styles.css?v=20260829g">
 
     <!-- CDN Libraries: Three.js, GSAP, Lucide Icons -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Global Mobile Drawer Toggle Function -->
+    <script>
+        function toggleMobileDrawer(e) {
+            if (e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+            document.body.classList.toggle('drawer-open');
+        }
+        function closeMobileDrawer() {
+            document.body.classList.remove('drawer-open');
+        }
+    </script>
 </head>
 <body class="institutional-theme">
 
@@ -60,8 +74,8 @@
                     <i data-lucide="arrow-up-right"></i>
                 </a>
                 
-                <!-- Mobile Hamburger Toggle Button -->
-                <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú de navegación">
+                <!-- Mobile Hamburger Toggle Button (iOS Touch Supported) -->
+                <button type="button" class="nav-hamburger" id="nav-hamburger" onclick="toggleMobileDrawer(event)" ontouchend="toggleMobileDrawer(event)" aria-label="Abrir menú de navegación">
                     <i data-lucide="menu" class="icon-open"></i>
                     <i data-lucide="x" class="icon-close"></i>
                 </button>
@@ -72,18 +86,18 @@
     <!-- Mobile Fullscreen Menu Drawer -->
     <div class="mobile-nav-drawer" id="mobile-drawer">
         <nav class="mobile-nav-links">
-            <a href="#inicio" class="mobile-nav-link">Inicio</a>
-            <a href="#trayectoria" class="mobile-nav-link">Trayectoria</a>
-            <a href="#direccion" class="mobile-nav-link">Vocación</a>
-            <a href="#servicios" class="mobile-nav-link">Oferta Educativa</a>
-            <a href="#tutoria" class="mobile-nav-link nav-highlight">Tutoría 6°→1° <span class="badge-new">NUEVO</span></a>
-            <a href="#testimonios" class="mobile-nav-link">Testimonios</a>
-            <a href="#calculadora" class="mobile-nav-link">Planes y Cotizador</a>
-            <a href="#contacto" class="mobile-nav-link">Contacto</a>
-            <a href="generaciones/index.html" class="mobile-nav-link">Fototeca</a>
+            <a href="#inicio" class="mobile-nav-link" onclick="closeMobileDrawer()">Inicio</a>
+            <a href="#trayectoria" class="mobile-nav-link" onclick="closeMobileDrawer()">Trayectoria</a>
+            <a href="#direccion" class="mobile-nav-link" onclick="closeMobileDrawer()">Vocación</a>
+            <a href="#servicios" class="mobile-nav-link" onclick="closeMobileDrawer()">Oferta Educativa</a>
+            <a href="#tutoria" class="mobile-nav-link nav-highlight" onclick="closeMobileDrawer()">Tutoría 6°→1° <span class="badge-new">NUEVO</span></a>
+            <a href="#testimonios" class="mobile-nav-link" onclick="closeMobileDrawer()">Testimonios</a>
+            <a href="#calculadora" class="mobile-nav-link" onclick="closeMobileDrawer()">Planes y Cotizador</a>
+            <a href="#contacto" class="mobile-nav-link" onclick="closeMobileDrawer()">Contacto</a>
+            <a href="generaciones/index.html" class="mobile-nav-link" onclick="closeMobileDrawer()">Fototeca</a>
         </nav>
         <div class="mobile-drawer-cta">
-            <a href="https://wa.me/525666661250" target="_blank" rel="noopener" class="btn-inst btn-gold btn-block">
+            <a href="https://wa.me/525666661250" target="_blank" rel="noopener" class="btn-inst btn-gold btn-block" onclick="closeMobileDrawer()">
                 <span>Agendar Cita por WhatsApp</span>
                 <i data-lucide="message-circle"></i>
             </a>

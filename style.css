@@ -345,9 +345,16 @@ a, button, select, input[type="checkbox"] {
     cursor: pointer;
     transition: background 0.2s ease;
     flex-shrink: 0;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    z-index: 1001;
 }
 
-.nav-hamburger i {
+.nav-hamburger * {
+    pointer-events: none !important;
+}
+
+.nav-hamburger i, .nav-hamburger svg {
     width: 22px;
     height: 22px;
 }
@@ -357,16 +364,16 @@ a, button, select, input[type="checkbox"] {
 }
 
 body.drawer-open .nav-hamburger {
-    background: var(--gold);
-    border-color: var(--gold);
+    background: var(--gold) !important;
+    border-color: var(--gold) !important;
 }
 
 body.drawer-open .nav-hamburger .icon-open {
-    display: none;
+    display: none !important;
 }
 
 body.drawer-open .nav-hamburger .icon-close {
-    display: block;
+    display: block !important;
 }
 
 /* Mobile Nav Drawer Overlay */
@@ -387,16 +394,17 @@ body.drawer-open .nav-hamburger .icon-close {
     transform: translateY(-10px);
     transition: opacity 0.3s ease, transform 0.3s var(--ease-smooth);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 body.drawer-open .mobile-nav-drawer {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translateY(0);
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
 }
 
 body.drawer-open {
-    overflow: hidden;
+    overflow: hidden !important;
 }
 
 .mobile-nav-links {
@@ -415,6 +423,8 @@ body.drawer-open {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 0.5rem 0;
+    touch-action: manipulation;
 }
 
 .mobile-nav-link:hover {
@@ -1744,9 +1754,9 @@ body.drawer-open {
     }
 
     .nav-hamburger {
-        width: 36px !important;
-        height: 36px !important;
-        min-width: 36px !important;
+        width: 38px !important;
+        height: 38px !important;
+        min-width: 38px !important;
     }
 
     .hero-inst {
